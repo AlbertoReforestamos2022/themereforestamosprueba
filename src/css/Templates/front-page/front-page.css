@@ -1,0 +1,67 @@
+        /* Contenedor principal */
+        .gallery_container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            overflow: hidden; 
+        }
+
+        /* Carrusel */
+        .gallery_content {
+            display: flex;
+            transition: none;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .gallery_content::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Imágenes */
+        .item_gallery {
+            flex: 0 0 210px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 5px;
+            padding: 10px;
+            transition: transform 0.5s ease-in-out;
+            scroll-snap-align: center;
+        }
+
+        .item_gallery img {
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Controles del carrusel */
+        .carrusel_controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            transform: translateY(-50%);
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .carrusel_controls button {
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            pointer-events: auto;
+        }

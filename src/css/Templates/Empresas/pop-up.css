@@ -1,0 +1,171 @@
+    /* Contenido del primer pop-up */
+    /* Imagen del primer pop-up */
+    .btn-actividad:hover {
+        color: white!important;
+    }
+
+    .content-carrusel {
+        max-width: 100%;
+    }   
+
+    .content-carrusel img {
+        max-width: 100%!important;
+        height: 200px;
+    }
+
+    .content-carrusel img:hover {
+        cursor:pointer;
+        animation: modalFadeIn .5s forwards;
+    }
+
+    .content-carrusel img:not(:hover) {
+        animation: modalFadeOut 0.5s forwards;
+    } 
+
+    .btns-first-carrusel {
+        position: relative;
+        bottom: -10px!important;
+    }
+
+    .btn-first-carrusel-prev:hover {
+        animation: modalFadeIn .5s forwards;
+    }
+
+    .btn-first-carrusel-prev:not(:hover){ 
+        animation: modalFadeOut 0.5s forwards;
+    }
+    
+    .btn-first-carrusel-next:hover {
+        animation: modalFadeIn .5s forwards;
+    }
+    .btn-first-carrusel-next:not(:hover) {
+        animation: modalFadeOut 0.5s forwards;
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: .5;
+        }
+    }
+
+    @keyframes modalFadeOut {
+        from {
+            opacity: .5;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .fade-in {
+        animation: modalFadeIn 0.8s forwards;
+    }
+
+    .fade-out {
+        animation: modalFadeOut 0.8s forwards;
+    }
+
+
+    /* Contenido del segundo pop-up (Galería de imagenes) */
+    .content-btns-gallery {
+        position: relative;
+        z-index: 2000;
+    }
+    .btn-second-carrusel:hover {
+        animation: modalFadeIn .5s forwards;
+    }
+    /* btn-second-carrusel-prev  btn-second-carrusel-next */
+    @media (min-width: 300px) and (max-width: 600px) {
+        .image-second-carrusel img {
+            padding: 5px!important;
+            max-width: 500px;
+            height: 200px;
+        }
+
+        /* indice  */
+        .carousel-indicators {
+            bottom: -55px!important;
+            margin-bottom: 30px!important;
+        }
+
+        /* Agregar estilos a las flechas */
+        .content-btns-gallery {
+            bottom: 43px!important;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1000px) {
+        .image-second-carrusel img {
+            padding: 15px!important;
+            max-width: 550px;
+            height: 300px;
+        }
+
+        /* indice  */
+        .carousel-indicators {            
+            bottom: -48px!important;
+            margin-bottom: 10px!important;
+            margin-top: 5px!important;
+        }
+
+        /* Agregar estilos a las flechas */
+        .content-btns-gallery {
+            bottom: 35px!important;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        .image-second-carrusel img{
+            max-width: 800px;
+            height: 500px;
+        }
+
+        /* indicadores */
+        .carousel-indicators {
+            bottom: -45px!important;
+            margin-top: 15px!important;
+        }
+
+        /* Agregar estilos a las flechas */
+        .content-btns-gallery {
+            bottom: 40px!important;
+            z-index: 2000; 
+        }
+    }
+
+
+    /* Contenido galería del segundo carrusel (Aliados A) */
+    .container-gallery-general {
+        max-width: 500px;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+
+        overflow: auto;
+        scrollbar-width: none;
+        scroll-snap-align: start;
+
+    }
+    .container-gallery-general img {
+        max-width: 200px;
+        height: 80px;
+        margin: 5px;
+    }
+    .container-gallery-general::-webkit-scrollbar-track {
+        color: beige;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+    }
+
+    #content-image-principal {
+        max-width: 400px;
+        max-height: 500px;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: start;
+    }

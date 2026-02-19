@@ -1,0 +1,83 @@
+/* Colores Reforestamos  */
+//Verdes
+$verde1 : #036935;
+$verde2: #b1cb36;
+$verde3: #94ce58;
+$verde4: #65b492;
+
+// Azules
+$azul1: #2abde3;
+$azul2: #1e94d4;
+$azul3: #4674c1;
+
+// Morado
+$morado: #9f6cc5;
+
+//Rojo
+$rojo: #ec432c;
+
+// Rosa
+$rosa: #e76571;
+
+//Naranja
+$naranja: #ef7323;
+
+//Amarillo
+$amarillo: #f5d138;
+
+// Externos
+$boscares: #CAA925;
+$blanco: #ffffff;
+$negro : #212121;
+
+
+
+// Colores Redes Sociales
+$facebook: #3b5998;
+$linkedin: #007bb5;
+$instagram: #D43089;
+$twiter: #55acee;
+$youtube: #bb0000;
+$tiktok: #212121;
+
+
+/* Espacios Fondo Inicio */
+$espacio: 163px; 
+$espacioTitulo: 155px;
+$espacioEventos: 130px; 
+
+/* Temas (Colores)*/
+$primary:       $verde1;
+$secondary:     $verde2;
+$success:       $verde3;
+$info:          $azul3;
+$warning:       $amarillo;
+$danger:        $rojo;
+$light:         $verde4;
+$dark:          $negro;
+
+
+// colores Links
+$bs-link-color: $verde3;
+$bs-link-hover-color: $verde2;
+
+/* Navegador */
+// Colores nav
+$navbar-light-color:                $verde1;
+$navbar-light-hover-color:          rgba($verde1, .5);
+$navbar-light-active-color:         rgba($verde1, .9);
+$navbar-light-disabled-color:       rgba($verde1, .3);
+
+/* Dropdown*/
+// colores
+$dropdown-link-color: $verde1;
+// $dropdown-link-hover-color:         $blanco;
+$dropdown-link-hover-bg: rgba($verde4, .3);
+// Bordes
+$dropdown-border-color: rgba($verde1, .4);
+
+/* cards */
+// bordes
+$border-width: 2.3px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

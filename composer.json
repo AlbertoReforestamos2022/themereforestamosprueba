@@ -1,0 +1,22 @@
+{
+    "name": "reforestamos/composer",
+    "description": "genrador JSON para la traducción de las notas del sitio web",
+    "type": "library",
+    "require": {
+        "deeplcom/deepl-php": "^1.8",
+        "voku/simple_html_dom": "^4.8",
+        "symfony/http-client": "^6.4",
+        "nyholm/psr7": "^1.8"
+    },
+    "authors": [
+        {
+            "name": "Reforestamos México, A.C.",
+            "email": "contacto@reforestamos.org"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

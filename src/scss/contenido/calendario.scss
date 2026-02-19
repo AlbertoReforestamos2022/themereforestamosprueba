@@ -1,0 +1,103 @@
+@use '../custom' as *;
+
+.calendar {
+    margin-top: 50px;
+  }
+  
+  .evento-activo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--verdeReforestamos)!important;
+    color: var(--blanco);
+    border-style: none;  
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .activo {
+    width: 40px;
+    height: 40px;
+    background-color: var(--blanco);
+    color: rgba(3, 105, 53, 0.9)!important;
+    border: solid 1px rgba(3, 105, 53, 0.9);
+  }
+  
+  
+  .cal-btn {
+    height: 50px;
+    width: 50px;
+  }
+  
+  .cal-btn:hover {
+    background-color: #fff;
+  }
+  
+  .dias-mes:hover {
+    cursor: pointer;
+  }
+  
+  .dias div:hover:not(.today) {
+    border-radius: 50%;
+    border-radius: 10px;
+    border-radius: 50%;
+  }
+  
+  .prev-date,
+  .next-date {
+    color: #c8c8c8;
+  }
+  
+  .prev-date:hover,
+  .next-date:hover {
+    color: #c8c8c8;
+  }
+  
+  .today {
+    color: $primary;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary;
+        color: &blanco;
+    }
+  }
+
+.cal-month,
+.cal-days,
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+
+.cal-month-name {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  text-align: center;
+}
+
+.cal-weekday,
+.cal-btn {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 0;
+}
+
+.cal-btn:not([disabled]) {
+  font-weight: 500;
+}
+
+.cal-btn:hover,
+.cal-btn:focus {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.cal-btn[disabled] {
+  border: 0;
+  opacity: .5;
+}

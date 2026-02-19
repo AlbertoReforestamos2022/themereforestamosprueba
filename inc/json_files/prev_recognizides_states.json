@@ -1,0 +1,537 @@
+{
+    "recognized_states": {
+        "2019": {
+            "cities": [
+                {
+                    "ciudad": "Guadalajara",
+                    "alt": "20.676420879504477",
+                    "lang": "-103.33849152634933",
+                    "estado": "Jalisco"
+                },
+                {
+                    "ciudad": "Mérida",
+                    "alt": "20.965981136809823",
+                    "lang": "-89.59659550299078",
+                    "estado": "Yucatán"
+                },
+                {
+                    "ciudad": "Toluca de Lerdo",
+                    "alt": "19.28271098859936",
+                    "lang": "-99.65524071890599",
+                    "estado": "Estado de México"
+                }
+            ]
+        },
+        "2020": {
+            "cities": [
+                {
+                    "ciudad": "Durango",
+                    "alt": "24.026922565183867",
+                    "lang": "-104.66640739734991",
+                    "estado": "Durango"
+                },
+                {
+                    "ciudad": "Guadalajara",
+                    "alt": "20.676420879504477",
+                    "lang": "-103.33849152634933",
+                    "estado": "Jalisco"
+                },
+                {
+                    "ciudad": "Irapuato",
+                    "alt": "20.6794469543946",
+                    "lang": "-101.35272585088315",
+                    "estado": "Guanajuato"
+                },
+                {
+                    "ciudad": "León",
+                    "alt": "21.127536482414104",
+                    "lang": "-101.6846505076004",
+                    "estado": "Guanajuato"
+                },
+                {
+                    "ciudad": "Mérida",
+                    "alt": "20.965981136809823",
+                    "lang": "-89.59659550299078",
+                    "estado": "Yucatán"
+                },
+                {
+                    "ciudad": "Morelia",
+                    "alt": "19.70828982386498",
+                    "lang": "-101.19303337339363",
+                    "estado": "Michoacán"
+                },
+                {
+                    "ciudad": "Querétaro",
+                    "alt": "20.590300873164068",
+                    "lang": "-100.38935374690672",
+                    "estado": "Querétaro"
+                },
+                {
+                    "ciudad": "Toluca",
+                    "alt": "19.28271098859936",
+                    "lang": "-99.65524071890599",
+                    "estado": "Estado de México"
+                },
+                {
+                    "ciudad": "Tuxtla Gutiérrez",
+                    "alt": "16.75281477062692",
+                    "lang": "-93.10190383944058",
+                    "estado": "Chiapas"
+                },
+                {
+                    "ciudad": "Zapopan",
+                    "alt": "20.673780148068303",
+                    "lang": "-103.41246649485343",
+                    "estado": "Jalisco"
+                }
+            ]
+        },
+        "2021": {
+            "cities": [
+                {
+                    "ciudad": "Durango",
+                    "alt" : "24.026922565183867",
+                    "lang" : "-104.66640739734991",          
+                    "estado" : "Durango"
+                }, 
+                {
+                    "ciudad": "Guadalajara",
+                    "alt" : "20.676420879504477",
+                    "lang" : "-103.33849152634933",         
+                    "estado" : "Jalisco"
+                }, 
+                {
+                    "ciudad": "Irapuato",
+                    "alt" : "20.6794469543946",
+                    "lang" : "-101.35272585088315",         
+                    "estado" : "Guanajuato"
+                }, 
+                {
+                    "ciudad": "Mérida",
+                    "alt" : "20.97393621993132",
+                    "lang" : "-89.59278636555777",         
+                    "estado" : "Yucatán"
+                }, 
+                {
+                    "ciudad": "Querétaro",
+                    "alt" : "20.588051119744915",
+                    "lang" : "-100.38180064715174",         
+                    "estado" : "Querétaro"
+                }, 
+                {
+                    "ciudad": "Alcaldía Tlalpan",
+                    "alt" : "19.2785941",
+                    "lang" : "-99.2408551",         
+                    "estado" : "Ciudad de México"
+                }, 
+                {
+                    "ciudad": "Toluca",
+                    "alt" : "19.28271098859936",
+                    "lang" : "-99.65524071890599",         
+                    "estado" : "Estado de México"
+                }, 
+                {
+                    "ciudad": "Tuxtla Gutiérrez",
+                    "alt" : "16.748147115571882",
+                    "lang" : "-93.10493799235631",         
+                    "estado" : "Chiapas"
+                }, 
+                {
+                    "ciudad": "Villa del Carbón",
+                    "alt" : "19.729079134216192",
+                    "lang" : "-99.46507173485094",         
+                    "estado" : "Estado de México"
+                }, 
+                {
+                    "ciudad": "Zapopan",
+                    "alt" : "20.674753691436635",
+                    "lang" : "-103.42130735283504",         
+                    "estado" : "Jalisco"
+                }
+            ]
+        },
+        "2022": {
+            "cities": [
+                {
+                    "ciudad" : "Guadalajara",
+                    "alt" : "20.676420879504477",
+                    "lang" : "-103.33849152634933",          
+                    "estado" : "Jalisco"
+                },
+                {
+                    "ciudad" : "Mérida",
+                    "alt" : "20.97393621993132",
+                    "lang" : "-89.59278636555777",            
+                    "estado" : "Yucatán"
+                }, 
+                {
+                    "ciudad" : "Toluca",
+                    "alt" : "19.28271098859936",
+                    "lang" : "-99.65524071890599",          
+                    "estado" : "Estado de México"
+                },        
+                {
+                    "ciudad" : "Durango",
+                    "alt" : "24.026922565183867",
+                    "lang" : "-104.66640739734991",              
+                    "estado" : "Durango"
+                },        
+                {
+                    "ciudad" : "Irapuato",
+                    "alt" : "20.6794469543946",
+                    "lang" : "-101.35272585088315",           
+                    "estado" : "Guanajuato"
+                },        
+                {
+                    "ciudad" : "Tuxtla Gutiérrez",
+                    "alt" : "16.748147115571882",
+                    "lang" : "-93.10493799235631",          
+                    "estado" : "Chiapas"
+                },        
+                {
+                    "ciudad" : "Zapopan",
+                    "alt" : "20.674753691436635",
+                    "lang" : "-103.42130735283504",          
+                    "estado" : "Jalisco"
+                },        
+                {
+                    "ciudad" : "Alcaldía Tlalpan",
+                    "alt" : "19.2785941",
+                    "lang" : "-99.2408551",          
+                    "estado" : "Ciudad de México"
+                },        
+                {
+                    "ciudad" : "Villa del Carbón",
+                    "alt" : "19.729079134216192", 
+                    "lang" : "-99.46507173485094",          
+                    "estado" : "Estado de México"
+                },        
+                {
+                    "ciudad" : "Alcaldía Miguel Hidalgo",
+                    "alt" : "19.4435979",
+                    "lang" : "-99.3699024",          
+                    "estado" : "Ciudad de México"
+                },        
+                {
+                    "ciudad" : "General Terán",
+                    "alt" : "25.25817286835235",
+                    "lang" : "-99.68140513084306",          
+                    "estado" : "Nuevo León"
+                },        
+                {
+                    "ciudad" : "Pachuca de Soto",
+                    "alt" : "20.10252033322459",
+                    "lang" : "-98.7609700311571",          
+                    "estado" : "Hidalgo"
+                },        
+                {
+                    "ciudad" : "San Luis Potosí",
+                    "alt" : "22.154868215995485",
+                    "lang" : "-100.96993836529855",          
+                    "estado" : "San Luis Potosí"
+                },        
+                {
+                    "ciudad" : "San Pedro Garza Garcia",
+                    "alt" : "25.658353139446312",
+                    "lang" : "-100.3997073483843",          
+                    "estado" : "Nuevo León"
+                }
+            ]
+        }, 
+        "2023": {
+            "cities": [
+                {
+                    "ciudad" : "Guadalajara",
+                    "alt" : "20.676420879504477",
+                    "lang" : "-103.33849152634933",              
+                    "estado" : "Jalisco"
+                },
+                {
+                    "ciudad" : "Mérida",
+                    "alt" : "20.97393621993132",
+                    "lang" : "-89.59278636555777",               
+                    "estado" : "Yucatán"
+                },
+                {
+                    "ciudad" : "Toluca",
+                    "alt" : "19.28271098859936",
+                    "lang" : "-99.65524071890599",              
+                    "estado" : "Estado de México"
+                },
+                {
+                    "ciudad" : "Durango",
+                    "alt" : "24.026922565183867",
+                    "lang" : "-104.66640739734991",                   
+                    "estado" : "Durango"
+                },
+                {
+                    "ciudad" : "Irapuato",
+                    "alt" : "20.6794469543946",
+                    "lang" : "-101.35272585088315",             
+                    "estado" : "Guanajuato"
+                },
+                {
+                    "ciudad" : "Tuxtla Gutierrez",
+                    "alt" : "16.75083000105662",
+                    "lang" : "-93.10001950986847",              
+                    "estado" : "Chiapas"
+                },
+                {
+                    "ciudad" : "Zapopan",
+                    "alt" : "20.674753691436635",
+                    "lang" : "-103.42130735283504",              
+                    "estado" : "Jalisco"
+                },
+                {
+                    "ciudad" : "Alcaldía Tlalpan",
+                    "alt" : "19.2785941",
+                    "lang" : "-99.2408551",               
+                    "estado" : "Ciudad de México"
+                },
+                {
+                    "ciudad" : "Villa del Carbón",
+                    "alt" : "19.729079134216192", 
+                    "lang" : "-99.46507173485094",              
+                    "estado" : "Estado de México"
+                },
+                {
+                    "ciudad" : "Alcaldía Miguel Hidalgo",
+                    "alt" : "19.4435979",
+                    "lang" : "-99.3699024",               
+                    "estado" : "Ciudad de México"
+                },
+                {
+                    "ciudad" : "General Terán",
+                    "alt" : "25.25817286835235",
+                    "lang" : "-99.68140513084306",                
+                    "estado" : "Nuevo León"
+                },
+                {
+                    "ciudad" : "Pachuca de Soto",
+                    "alt" : "20.10252033322459",
+                    "lang" : "-98.7609700311571",                 
+                    "estado" : "Hidalgo"
+                },
+                {
+                    "ciudad" : "San Luis Potosí",
+                    "alt" : "22.154868215995485",
+                    "lang" : "-100.96993836529855",              
+                    "estado" : "San Luis Potosí"
+                },
+                {
+                    "ciudad" : "San Pedro Garza García",
+                    "alt" : "25.65716721143295",
+                    "lang" : "-100.4005383365338",              
+                    "estado" : "Nuevo León"
+                },
+                {
+                    "ciudad" : "Morelia",
+                    "alt" : "19.70828982386498",
+                    "lang" : "-101.19303337339363",             
+                    "estado" : "Michoacán"
+                },
+                {
+                    "ciudad" : "León",
+                    "alt" : "21.127536482414104",
+                    "lang" : "-101.6846505076004",              
+                    "estado" : "Guanajuato"
+                },
+                {
+                    "ciudad" : "Querétaro",
+                    "alt" : "20.588051119744915",
+                    "lang" : "-100.38180064715174",            
+                    "estado" : "Querétaro"
+                },
+                {
+                    "ciudad" : "Iguala de la Independencia",
+                    "alt" : "18.34445174734152",
+                    "lang" : "-99.54296275948748",              
+                    "estado" : "Guerrero"
+                },
+                {
+                    "ciudad" : "La Paz",
+                    "alt" : "24.144360561980907",
+                    "lang" : "-110.31332791354298",              
+                    "estado" : "Baja California Sur"
+                },
+                {
+                    "ciudad" : "Metepec",
+                    "alt" : "19.253096921555617",
+                    "lang" : "-99.59808461825635",               
+                    "estado" : "Estado de México"
+                }
+            ]
+        }, 
+        "2024" : {
+            "cities": [
+                {
+                    "ciudad" : "Guadalajara",
+                    "alt" : "20.676420879504477",
+                    "lang" : "-103.33849152634933",             
+                    "estado": "Jalisco"
+                },
+                {
+                    "ciudad" : "Mérida",
+                    "alt" : "20.97393621993132",
+                    "lang" : "-89.59278636555777",                
+                    "estado": "Yucatán"
+                },
+                {
+                    "ciudad" : "Toluca",
+                    "alt" : "19.28271098859936",
+                    "lang" : "-99.65524071890599",              
+                    "estado": "Estado de México"
+                },
+                
+                {
+                    "ciudad" : "Durango",
+                    "alt" : "24.026922565183867",
+                    "lang" : "-104.66640739734991",              
+                    "estado": "Durango"
+                },
+                {
+                    "ciudad" : "Irapuato",
+                    "alt" : "20.6794469543946",
+                    "lang" : "-101.35272585088315",              
+                    "estado": "Guanajuato"
+                },
+                {
+                    "ciudad" : "Tuxtla Gutiérrez",
+                    "alt" : "16.748147115571882",
+                    "lang" : "-93.10493799235631",              
+                    "estado": "Chiapas"
+                },
+                {
+                    "ciudad" : "Zapopan",
+                    "alt" : "20.674753691436635",
+                    "lang" : "-103.42130735283504",              
+                    "estado": "Jalisco"
+                },
+                
+                {
+                    "ciudad" : "Alcaldía Tlalpan",
+                    "alt" : "19.2785941",
+                    "lang" : "-99.2408551",             
+                    "estado": "Ciudad de México"
+                },
+                {
+                    "ciudad" : "Villa del Carbón",
+                    "alt" : "19.729079134216192", 
+                    "lang" : "-99.46507173485094",              
+                    "estado": "Estado de México"
+                },
+                
+                {
+                    "ciudad" : "Alcaldía Miguel Hidalgo",
+                    "alt" : "19.4435979",
+                    "lang" : "-99.3699024",              
+                    "estado": "Ciudad de México"
+                },
+                {
+                    "ciudad" : "General Terán",
+                    "alt" : "25.25817286835235",
+                    "lang" : "-99.68140513084306",               
+                    "estado": "Nuevo León"
+                },
+                {
+                    "ciudad" : "San Luis Potosí",
+                    "alt" : "22.154868215995485",
+                    "lang" : "-100.96993836529855",              
+                    "estado": "San Luis Potosí"
+                },
+                {
+                    "ciudad" : "San Pedro Garza García",
+                    "alt" : "21.127536482414104",
+                    "lang" : "-101.6846505076004",             
+                    "estado": "Nuevo León"
+                },
+                
+                {
+                    "ciudad" : "León",
+                    "alt" : "21.127536482414104",
+                    "lang" : "-101.6846505076004",              
+                    "estado": "Guanajuato"
+                },
+                {
+                    "ciudad" : "Iguala de la Independencia",
+                    "alt" : "18.34445174734152",
+                    "lang" : "-99.54296275948748",              
+                    "estado": "Guerrero"
+                },
+                {
+                    "ciudad" : "La Paz",
+                    "alt" : "24.144360561980907",
+                    "lang" : "-110.31332791354298",              
+                    "estado": "Baja California Sur"
+                },
+                {
+                    "ciudad" : "Metepec",
+                    "alt" : "19.253096921555617",
+                    "lang" : "-99.59808461825635",              
+                    "estado": "Estado de México"
+                },
+                
+                {
+                    "ciudad" : "Cuernavaca",
+                    "alt" : "18.925665345599672",
+                    "lang" : "-99.2240902774136",              
+                    "estado": "Morelos"
+                },
+                {
+                    "ciudad" : "Hermosillo",
+                    "alt" : "29.075221887965736",
+                    "lang" : "-110.9498663417861",              
+                    "estado": "Sonora"
+                },
+                {
+                    "ciudad" : "Monterrey",
+                    "alt" : "25.688902655615788",
+                    "lang" : "-100.3083326183554",              
+                    "estado": "Nuevo León"
+                },
+                {
+                    "ciudad" : "Nogales",
+                    "alt" : "31.300829565335615",
+                    "lang" : "-110.93886155010674",              
+                    "estado": "Sonora"
+                },
+                {
+                    "ciudad" : "Oaxaca de Juárez",
+                    "alt" : "17.073804800073578",
+                    "lang" : "-96.72156915651173",              
+                    "estado": "Oaxaca"
+                },
+                {
+                    "ciudad" : "Puebla de Zaragoza",
+                    "alt" : "19.041976163978156",
+                    "lang" : "-98.20660647133202",              
+                    "estado": "Puebla"
+                },
+                {
+                    "ciudad" : "Puerto Vallarta",
+                    "alt" : "20.656904180898014",
+                    "lang" : "-105.20748905963615",              
+                    "estado": "Jalisco"
+                },
+                {
+                    "ciudad" : "Sahuayo de Morelos",
+                    "alt" : "20.05458181906602",
+                    "lang" : "-102.72355365538506",              
+                    "estado": "Michoacán"
+                },
+                {
+                    "ciudad" : "Tlajomulco de Zúñiga",
+                    "alt" : "20.474669023495558",
+                    "lang" : "-103.44790502938163",              
+                    "estado": "Jalisco"
+                },
+                {
+                    "ciudad" : "Zamora de Hidalgo",
+                    "alt" : "19.990610032361225",
+                    "lang" : "-102.2820705120572",              
+                    "estado": "Michoacán"
+                }
+            ]
+        }
+    }
+}

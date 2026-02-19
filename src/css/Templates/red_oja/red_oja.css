@@ -1,0 +1,797 @@
+/* ----------------------------Generales ---------------------------------------------------------------*/
+.margen-titulo {
+    margin: 40px auto;
+}
+.titulo_red-oja {
+    color: #ef7323;
+}
+.subtitulo-red-oja {
+    color: #9f6cc5;
+}
+
+.subtitulos-contenido-ac {
+    color: rgba(0,0,0,.7)
+}
+
+.texto-contenido-red-oja {
+    color: rgba(0,0,0,.5) 
+}
+
+.btn-accion-red-oja {
+    color: #fff;
+    background-color: rgba(159,108, 197,.85);
+    border-radius: 10px!important;
+    padding: 4px;
+}
+
+.btn-accion-red-oja:hover {
+    color: #9f6cc5!important;
+    border-color: #9f6cc5;
+    background-color: #fff;
+}
+
+.container_programa-acapulco, .container_contacto-ac {
+    margin-top: 120px;
+}
+
+/* Botones saber más */
+.btn-saber-mas {
+    font-size: 1.3rem;
+    background-color: #ef7323;
+    color: #fff;
+}
+
+.btn-saber-mas:hover {
+    color: #ef7323;
+    border-color: #ef7323;
+    background-color: #fff;
+}
+
+/*------------------------------------------------------ Sobre Nostros ------------------------------------------------------*/
+.content-sobre-nosotros {
+    border-radius: 15px!important;
+}
+
+.contenido-nosotros {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.img-sobre-nosotros {
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius: 15px;
+}
+
+.titulo-nosotros h2 {
+    color: #ef7323;
+    font-size: 2.5rem!important;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------ Nuestros Principios ------------------------------------------------------ */
+.container_nuestros-principios {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.iconos_nuestros_principios{
+    padding: 30px 60px;
+}
+
+.icono_principio {
+    height: 300px;
+    display: grid;
+    align-content: center;
+}
+
+/* Media queries */
+/* Dispositivos Móviles */
+@media (max-width: 480px) { 
+    /* Estilos para teléfonos pequeños */
+
+}
+
+@media (max-width: 768px) { 
+    /* Estilos para teléfonos grandes y tablets pequeñas */
+    .iconos_nuestros_principios{
+        padding: 10px 40px;
+    }
+}
+
+/* Dispositivos Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    /* Estilos para tablets y pantallas medianas */
+    .iconos_nuestros_principios{
+        padding: 10px;
+    }
+}
+
+/* Dispositivos Laptop */
+@media (max-width: 1280px) { 
+    /* Estilos para laptops pequeñas y pantallas medianas */
+
+}
+
+/* Dispositivos Grandes y UltraWide */
+@media (max-width: 1440px) { 
+    /* Estilos para monitores grandes */
+
+}
+
+@media (max-width: 1920px) { 
+    /* Estilos para monitores 1080p */
+
+}
+
+@media (min-width: 2560px) { 
+
+}
+
+/*------------------------------------------------------ Modelo de incidencia ------------------------------------------------------*/
+.container_modelo-incidencia {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.content_modelo-incidencia {
+
+}
+
+.iconos_modelo_incidencia {
+    padding: 10px;
+}
+
+.icono_modelo-incidencia {
+    height: 300px;
+    display: grid;
+    align-content: center;
+}
+
+/* Media queries */
+/* Dispositivos Móviles */
+@media (max-width: 480px) { 
+    /* Estilos para teléfonos pequeños */
+
+}
+
+@media (max-width: 768px) { 
+    /* Estilos para teléfonos grandes y tablets pequeñas */
+    .iconos_modelo_incidencia {
+        padding: 10px 40px;
+    }
+}
+
+/* Dispositivos Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    /* Estilos para tablets y pantallas medianas */
+    .iconos_modelo_incidencia {
+        padding: 10px;
+    }
+}
+
+/* Dispositivos Laptop */
+@media (max-width: 1280px) { 
+    /* Estilos para laptops pequeñas y pantallas medianas */
+
+}
+
+/* Dispositivos Grandes y UltraWide */
+@media (max-width: 1440px) { 
+    /* Estilos para monitores grandes */
+
+}
+
+@media (max-width: 1920px) { 
+    /* Estilos para monitores 1080p */
+
+}
+
+@media (min-width: 2560px) { 
+
+}
+
+/* ------------------------------------------------------ Nuestros Ejes ------------------------------------------------------ */
+.container_nuestros-ejes  {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.content_nuestros-ejes {
+
+}
+
+.iconos_nuestros-ejes {
+    padding: 12px;
+}
+
+.icono_nuestros-ejes {
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card_icon-nuestros-ejes {
+    width: 170px;
+}
+
+.container_iconos-nuestros-ejes {
+    max-width: 400px!important;
+}
+
+.container_iconos-nuestros-ejes p {
+    text-align: justify;
+    width: 250px!important;
+}
+
+/* ------------------------------------------------------ Qué se ha hecho  ------------------------------------------------------*/
+.content_acciones-red-oja {
+    margin: 40px auto; 
+}
+
+.container-files {
+
+}
+
+.content-search {
+    /* max-height: 350px; */
+}
+
+.content-anios {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* .content-results {
+    margin-top: 20px;
+    /* max-height: 250px; 
+    overflow-y: auto;
+} */
+
+.buscador input[type="text"] {
+    border: 1px solid #a2a2a2;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.buscador input[type="text"]:focus {
+    border-color: #ccc;
+}
+
+.btn-buscar-red-oja { 
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-color: rgba(159,108, 197,.85);
+    border-radius: 10px!important;
+}
+
+.btn-buscar-red-oja:hover {
+    color: #9f6cc5!important;
+    border-color: #9f6cc5;
+    background-color: #fff;
+}
+
+
+/* Dispositivos Móviles */
+@media (max-width: 480px) { 
+    /* Estilos para teléfonos pequeños */
+    /* ¿Que se ha hecho ? */
+    .buscador input[type="text"] {
+        max-width: 100%;
+    }
+
+    .section-filter-files {
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 768px) { 
+    /* Estilos para teléfonos grandes y tablets pequeñas */
+    /* ¿Qué se ha hecho? */
+    .content-search {
+        max-height: 500px;
+    }
+    .section-filter-files {
+        justify-content: center;
+    }
+
+    .buscador input[type="text"] {
+        max-width: 400px;
+    }
+
+    .content-anios {
+        padding: 10px;
+    }
+
+    .content-results {
+        max-height: 370px;
+    }
+}
+
+/* Dispositivos Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { 
+    /* Estilos para tablets y pantallas medianas */
+    /* ¿Qué se ha hecho? */
+    .content-search {
+        max-height: 600px;
+    }
+
+
+    .section-filter-files {
+        justify-content: center;
+    }
+}
+
+/* Dispositivos Laptop */
+@media (min-width: 1024px) and (max-width: 1280px) { 
+    /* Estilos para laptops pequeñas y pantallas medianas */
+    /* ¿Qué se ha hecho? */
+    .content-search {
+        max-height: 400px;
+    }
+
+}
+
+/* Dispositivos Grandes y UltraWide */
+@media (min-width: 1280px) and (max-width: 1440px) { 
+    /* Estilos para monitores grandes */
+
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) { 
+    /* Estilos para monitores 1080p */
+    /* ¿Qué se ha hecho? */
+    .content-search {
+        max-height: 500px;
+    }
+
+    .section-filter-files {
+        justify-content: space-around;
+    }
+
+    .title-filter-section {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 2560px) { 
+    /* Estilos para monitores 2K y 4K */
+    /* ¿Qué se ha hecho? */
+    .content-search {
+        max-height: 700px;
+    }
+
+}
+
+
+/*------------------------------------------------------ Nuestro Mapa ------------------------------------------------------*/
+.container_mapa {
+    margin: 100px auto;
+}
+
+.content_mapa {
+    /* max-height: 400px; */
+    margin: 40px auto;
+    box-shadow: 5px 10px 40px 10px rgba(50, 50, 50, 0.20)!important;
+}
+
+.content_mapa-instituciones {
+    padding: 0!important;
+    height: 450px;
+}
+
+.lista-organizaciones {
+    color: #9f6cc5!important;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.institutions-list {
+    margin: 30px auto;
+} 
+
+#stateFilter {
+
+}
+
+.institution, .organizaciones-red-oja {
+    cursor: pointer;
+    color: rgba(0,0,0,.7);
+} 
+
+.institution:hover, .organizaciones-red-oja:hover {
+    color: #9f6cc5;
+}
+
+#map_red-oja {
+    height: 100%;
+}
+
+.institution-container {
+    max-height: 300px; /* Ajusta la altura máxima */
+    overflow-y: auto; /* Actica el scroll vertical cuando sea necesario  */
+    padding: 10px;
+}
+
+.instroduction-text {
+    margin-top: 60px;
+}
+
+/* Spinner loading */
+#list-content {
+    /* position: relative; */
+    margin-top: .6rem;
+    margin-top: .6rem;
+}
+.loader-container {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,1);
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top-color: #9f6cc5;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Medias queries responsive del mapa dependiendo el tamaño de la pantalla. */
+
+/*------------------------------------------------------ Galería ---------------------------------------------------- */
+/* Contenedor principal */
+.gallery_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+/* Carrusel */
+.gallery_content {
+    display: flex;
+    transition: none;
+    /* overflow-x: auto; */
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    gap: 10px; /* Espacio entre imágenes */
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.gallery_content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Imágenes */
+.item_gallery {
+    flex: 0 0 210px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    scroll-snap-align: center;
+}
+
+.item_gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Controles del carrusel */
+.carrusel_controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.carrusel_controls button {
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    pointer-events: auto;
+}
+
+.carrusel_controls button:hover {
+}
+
+/* Lightbox */
+.lightbox-carrusel {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container-lightbox {
+    max-width: 80vw;
+    max-height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 30px;
+}
+
+.lightbox-img img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+
+    padding: 10px;
+}
+
+/* Controles del Lightbox */
+.gallery_controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    transform: translateY(-50%);
+}
+
+.gallery_controls button {
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gallery_controls button:hover {
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .item_gallery {
+        flex: 0 0 150px;
+    }
+
+    .container-lightbox {
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery_content {
+        justify-content: center;
+    }
+
+    .item_gallery {
+        flex: 0 0 120px;
+    }
+
+    .carrusel_controls button {
+        padding: 8px;
+    }
+}
+
+
+
+/*------------------------------------------------------ Súmate ------------------------------------------------------*/
+.container_sumate {
+    margin: 60px auto;
+}
+
+.content_sumate {
+    padding: 10px 30px;
+}
+
+.content_como-sumo {
+    padding: 10px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.subtitulo_sumar {
+    padding: 30px;
+    text-align: center;
+}
+
+.list_como-sumo li {
+    color: rgba(0,0,0,.7);
+    margin: 10px;
+    list-style: none;
+}
+.list_como-sumo li:before {
+    content: '';/* Ruta del ícono SVG o imagen */
+    display: inline-block;
+    background-image: url('http://www.reforestamosmexico.org/wp-content/uploads/2024/12/icon-hoja.png');
+    background-size: cover; /* Asegura que se adapte al tamaño */
+    width: 20px; /* Ancho del ícono */
+    height: 20px; /* Alto del ícono */
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Media Queries */
+/* Dispositivos Móviles */
+@media (max-width: 480px) { 
+    /* Súmate */
+    .content_sumate {
+        padding: 10px 30px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) { 
+    /* Súmate */
+    .content_sumate {
+        padding: 10px 30px;
+    }
+}
+
+/* Dispositivos Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { 
+
+}
+
+
+/*------------------------------------------------------ Contacto ------------------------------------------------------*/
+/* Formulario de contacto */
+.text-formulario {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Estilos generales del formulario */
+.formulario_contacto-red-oja {
+    max-width: 700px; /* Ajusta el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+}
+
+/* Estilos para los labels */
+.formulario_contacto-red-oja label {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+/* Estilos para los inputs */
+.formulario_contacto-red-oja input[type="text"],
+.formulario_contacto-red-oja input[type="email"],
+.formulario_contacto-red-oja input[type="tel"],
+.formulario_contacto-red-oja textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 15px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.formulario_contacto-red-oja textarea {
+    height: 200px;
+}
+
+.boton-enviar {
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+
+/* Nuestras RRSS */
+/* Redes Sociales */
+.col-rs-content {
+    display: grid;
+    justify-items: center;
+}
+.facebook-card, .instagram-card, .youtube-card {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.facebook-card {
+    background-color: #3b5998;
+}
+.instagram-card {
+    background: #ff0084;
+}
+.youtube-card {
+    background-color: #bb0000;
+}
+
+.facebook-icon i, .instagram-icon i, .youtube-icon i {
+    color: #fff;
+    font-size: 40px;
+}
+
+
+/* Media Queries */
+
+/* Responsive  */
+@media screen and (max-width: 700px) {
+    .container_sobre-nosotros, .container_programa-tcw, .container_programa-doc-arbol, .container_programa-acapulco {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .icono_nuestros-ejes {
+        display: grid;
+        justify-content: center;
+    }
+    
+    .card_icon-nuestros-ejes {
+        width: 95%;
+        display: grid;
+        justify-content: center;
+    }
+
+    .container_iconos-nuestros-ejes {
+        /* display: flex; */
+        justify-items: center;
+    }
+}
+
+/* Tablet */
+@media (min-width: 700px) {
+    .container_beneficios-arbolado, .container_resultados_tcw, .container_resultados_tcw{
+        margin-top: 100px;
+        margin-bottom: 140px;
+    }
+
+    .content-tcw, .content-doc-arbol, .content-acapulco  {
+        padding: 40px;
+    }
+    
+}
+
+/* laptop */
+@media (min-width: 1000px) {
+    .contenido-nosotros {
+        padding: 40px!important;
+    }
+
+}
+
+
+
+

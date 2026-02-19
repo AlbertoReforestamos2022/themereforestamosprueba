@@ -1,0 +1,518 @@
+/* Generales */
+.subtitulos-contenido-ac {
+    color: rgba(0,0,0,.7)
+}
+
+.texto-contenido-ac {
+    color: rgba(0,0,0,.5);
+    font-size: 14px!important;
+}
+
+
+/* Containers TCW, Doc.Árbol */
+.container_programa-tcw, .container_programa-doc-arbol{
+    
+}
+
+
+.text-iniciativa {
+    font-size: 14px!important; 
+}
+
+/* Contenedor TCW, Doc. Árbol, Content Acapulco */
+.content-iniciativas {
+    border-radius: 15px!important;
+}
+
+/* Container Acapulco y sección contacto */
+.container_programa-acapulco, .container_contacto-ac {
+    margin-top: 120px;
+}
+
+/* Counter */
+.counter {
+
+}
+
+
+/* Contenido sección nostros */
+.content-sobre-nosotros {
+    /* max-height: 400px; */
+    border-radius: 15px!important;
+    
+}
+
+.container_sobre-nosotros {
+
+}
+
+.contenido-nosotros {
+
+}
+
+
+.img-sobre-nosotros {
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius: 15px;
+
+    /* height: 100%; */
+}
+
+.titulo-nosotros h2 {
+    color: #036935;
+    font-weight: bold;
+}
+
+
+/* Sección beneficios del arbolado */
+.container_beneficios-arbolado, .container_resultados_tcw, .container_resultados-doc-arbol, .container_resultados-acapulco {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.iconos_beneficios-arbolado {
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.icono-beneficio {
+    width: 250px;
+
+    display: grid;
+    align-content: center;
+}
+
+.container_iconos-arbolado p {
+    font-size: 14px!important;
+}
+
+.btn-saber-mas {
+    font-size: 1rem;
+    border-radius: 10px!important;
+}
+
+
+/* Sección TCW */
+.text-tcw {
+    padding: 15px 10px;
+    text-align: justify;
+}
+
+/* Resultados TCW, Doc.árbol, Acciones acapulco */
+/* Col Counter */
+.iconos_resultados_tcw, .iconos_resultados_doc-arbol , .iconos_resultados_acapulco{
+    display: flex;
+    justify-content: center;
+}
+
+.icono-resultado-tcw, .icono-resultado-doc-arbol, .icono-resultado-acapulco {
+    padding: 8px;
+    width: 220px;
+    height: 220px;
+    display: grid;
+    align-items: start;
+}
+
+.subtitulos-contenido-tcw, .subtitulos-contenido-doc-arbol, .subtitulos-contenido-acapulco {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.texto-contenido-tcw , .texto-contenido-doc-arbol, .texto-contenido-acapulco {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.container_iconos_iniciativas p {
+    font-size: 16px!important;
+}
+
+/* Figure image */
+.figure-img {
+    max-width: 350px;
+    height: 300px;
+    background-color: grey;
+    border-radius: 15px;
+}
+
+
+/* Mapa ciudades reconocidas tree cities of the world */
+#map_TCW {
+    height: 450px;
+}
+
+.list {
+    max-height: 250px; /* Ajusta la altura máxima */
+    overflow-y: auto; /* Actica el scroll vertical cuando sea necesario  */
+    padding: 10px;
+}
+
+.filter-cities {
+    margin-left: 10px;
+}
+
+
+/* Formulario de contacto */
+.text-formulario {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Estilos generales del formulario */
+.formulario_contacto-ac {
+    max-width: 700px; /* Ajusta el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+}
+
+/* Estilos para los labels */
+.formulario_contacto-ac label {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+/* Estilos para los inputs */
+.formulario_contacto-ac input[type="text"],
+.formulario_contacto-ac input[type="email"],
+.formulario_contacto-ac input[type="tel"],
+.formulario_contacto-ac textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 15px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.formulario_contacto-ac textarea {
+    height: 200px;
+}
+
+.boton-enviar {
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+
+/* -------------------------------- Content Iniciativas Reforestamdos México  */
+
+.content-initiatives {
+    position: relative;
+}
+
+.container-initiatives, .description-initiatives {
+    animation: FadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* gallery */
+.carrusel-wrapper  {
+    width: 100%;
+}
+
+/* gallery-container */
+.carrusel-items-initiatives {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* gallery-item */
+.card-content-initiatives {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 15px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+ 
+}
+
+/* gallery-item-0 */ 
+.card-content-initiatives-0 {
+    width: 300px;
+    height: 350px;    
+    
+    left: 50%;
+    z-index: 2;
+    opacity: 1;
+    box-shadow: -2px 5px 33px 6px rgba(0,0,0,.35);
+    transform: translateX(-50%); 
+}
+
+/* Media queries .card-content-initiatives-0 */
+@media (max-width: 900px) {
+    .principal-card { 
+        top : 0; 
+        width : 200px;
+        height : 270px;  
+    }
+
+    .container-initiatives  {
+        margin-top: 300px;
+        width: 100%!important;
+    }
+
+    .principal-container {
+        height: 1100px;
+    } 
+    
+    .principal-initiative {
+        height: 800px;
+    }
+}
+
+@media (min-width: 901px) {
+    .principal-card { 
+        left: 0;
+        top : 30%; 
+        width : 200px;
+        max-height : 270px;  
+    }
+
+    .principal-container {
+        height: 700px;
+    }  
+
+    .principal-initiative {
+        height: 600px;
+    }
+}
+
+@media (min-width: 1401px) {
+    .principal-card { 
+        left: -30px;
+    }
+}
+
+
+
+
+.card-content-initiatives-0 div img {
+    width: 220px;
+}
+
+/* gallery-item-0, gallery-item-1 */ 
+.card-content-initiatives-1, .card-content-initiatives-3 {
+    width: 250px;
+    height: 250px;
+    opacity: 0.8;
+    
+    z-index: 1;
+}
+
+/* gallery-items-1 */
+.card-content-initiatives-1 {
+    left: 32%;
+    transform: translateX(-50%);
+}
+
+.card-content-initiatives-1 div img {
+    width: 150px;
+}
+
+/* gallery-items-2 */ 
+/* Modificar la para dispositivos móviles  */
+/* Tablet */
+@media (max-width: 700px) {
+    .card-content-initiatives-2 {
+        right: -15%!important;
+        transform: translateX(-50%);
+    }
+    
+}
+
+.card-content-initiatives-2 {
+    right: 12%;
+    opacity: .4;
+    transform: translateX(-50%);
+    
+}
+
+.card-content-initiatives-2 div img {
+    width: 150px;
+}
+
+/* gallery-items-3 */
+.card-content-initiatives-3 {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.card-content-initiatives-3 div img {
+    width: 150px;
+}
+
+/* gallery-items-4 */
+.card-content-initiatives-4 {
+    left: 85%;
+    opacity: .4;
+    transform: translateX(-50%);
+}
+
+.card-content-initiatives-4 div img {
+    width: 150px;
+}
+
+/* gallery-controls */
+.container-controls {
+    position: absolute;
+    top: 38%;
+    z-index: 1000;
+}
+
+.carrusel-initiatives-controls {
+    margin: 25px 0;
+}
+
+.carrusel-initiatives-controls button {
+}
+
+
+.gallery-controls-previous {
+    left: 0;
+}
+
+.gallery-controls-next {
+    right: 0;
+}
+
+
+.gallery-nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery-nav li{
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+    
+.gallery-nav li.gallery-item-selected{
+    background:#555;
+}
+
+/* Información sobre las iniciativas Reforestamos México */
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content-info-initiatives {
+    margin-top: 25px;
+    animation: FadeIn 1s ease-in-out;
+
+}
+
+.container-principal-initiatives {
+    background-color: rgba(0,0,0,.35);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    max-width: 1400px;
+}
+
+.container-initiatives {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* -------------------------------- Content Iniciativas Reforestamdos México  */
+
+/* Responsive  */
+/* Dispositivos Móviles */
+@media (max-width: 480px) { 
+    /* Estilos para teléfonos pequeños */
+}
+
+@media (max-width: 768px) { 
+    /* Estilos para teléfonos grandes y tablets pequeñas */
+}
+
+/* Dispositivos Tablets */
+@media (max-width: 1024px) { 
+    /* Estilos para tablets y pantallas medianas */
+}
+
+/* Dispositivos Laptop */
+@media (max-width: 1280px) { 
+    /* Estilos para laptops pequeñas y pantallas medianas */
+
+}
+
+/* Dispositivos Grandes y UltraWide */
+@media (max-width: 1440px) { 
+    /* Estilos para monitores grandes */
+    .content-initiatives {
+        /* max-height: 500px; */
+    }
+
+    .content-cards-initiatives {
+   
+    }
+}
+
+@media (max-width: 1920px) { 
+    /* Estilos para monitores 1080p */
+}
+
+@media (min-width: 2560px) { 
+    /* Estilos para monitores 2K y 4K */
+}
+
+
+@media screen and (max-width: 700px) {
+    .container_sobre-nosotros, .container_programa-tcw, .container_programa-doc-arbol, .container_programa-acapulco {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 700px) {
+    .container_beneficios-arbolado, .container_resultados_tcw, .container_resultados_tcw{
+        /* margin-top: 100px; */
+        margin-bottom: 140px;
+    }
+
+    .content-tcw, .content-doc-arbol, .content-acapulco  {
+        padding: 40px;
+    }
+    
+}
+
+@media (min-width: 1000px) {
+    .contenido-nosotros {
+        padding: 40px!important;
+    }
+
+    .text-tcw, .text-doc-arbol, .text-acapulco {
+        padding: 15px 30px;
+    } 
+}
+
