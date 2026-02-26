@@ -95,7 +95,7 @@ git push origin feature/nombre-funcionalidad
 # - Screenshots si hay cambios visuales
 ```
 
-## 📋 Estándares de Código
+## Estándares de Código
 
 ### PHP
 
@@ -237,19 +237,19 @@ $espaciado-base: 1rem;
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Pruebas Manuales
 
 Antes de crear un PR, verifica:
 
-- ✅ El código funciona en navegadores modernos (Chrome, Firefox, Safari, Edge)
-- ✅ Responsive design funciona correctamente
-- ✅ No hay errores en la consola
-- ✅ No hay warnings de PHP
-- ✅ Los formularios validan correctamente
-- ✅ Las imágenes cargan correctamente
-- ✅ No hay problemas de accesibilidad evidentes
+- El código funciona en navegadores modernos (Chrome, Firefox, Safari, Edge)
+- Responsive design funciona correctamente
+- No hay errores en la consola
+- No hay warnings de PHP
+- Los formularios validan correctamente
+- Las imágenes cargan correctamente
+- No hay problemas de accesibilidad evidentes
 
 ### Testing Local
 
@@ -262,7 +262,7 @@ define('WP_DEBUG_DISPLAY', false);
 # Revisar logs en wp-content/debug.log
 ```
 
-## 🎨 Guía de Diseño
+## Guía de Diseño
 
 ### Colores
 
@@ -305,7 +305,7 @@ font-family: 'Montserrat', sans-serif; /* Títulos */
 Usar múltiplos de 8px para consistencia:
 - 8px, 16px, 24px, 32px, 40px, 48px, etc.
 
-## 📝 Documentación
+## Documentación
 
 ### Comentarios en Código
 
@@ -360,7 +360,7 @@ Antes de crear el PR:
 - [ ] He probado en diferentes navegadores
 - [ ] He verificado responsive design
 
-## 🐛 Reporte de Bugs
+## Reporte de Bugs
 
 ### Template para Issues
 
@@ -392,7 +392,7 @@ Si aplica, agregar screenshots.
 Cualquier otro contexto relevante.
 ```
 
-## 💡 Sugerencias de Funcionalidades
+## Sugerencias de Funcionalidades
 
 ### Template para Feature Requests
 
@@ -410,7 +410,7 @@ Otras soluciones o funcionalidades alternativas.
 Cualquier otro contexto o screenshots.
 ```
 
-## 📚 Recursos Útiles
+## Recursos Útiles
 
 ### WordPress
 - [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/)
@@ -428,15 +428,3 @@ Cualquier otro contexto o screenshots.
 ### CSS/SCSS
 - [BEM Methodology](https://en.bem.info/methodology/)
 - [Sass Documentation](https://sass-lang.com/documentation)
-
-## ❓ ¿Preguntas?
-
-Si tienes preguntas sobre cómo contribuir:
-1. Revisa esta guía y el README
-2. Busca en issues existentes
-3. Crea un nuevo issue con la etiqueta "question"
-4. Contacta al equipo de desarrollo
-
----
-
-¡Gracias por contribuir a Reforestamos México! 🌳
