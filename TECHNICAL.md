@@ -220,9 +220,10 @@ red_oja_components/
 - Participantes
 - Recursos
 
-## 🎨 Sistema de Estilos
+## Sistema de Estilos
 
 ### Estructura SCSS
+Forma en la que debe quedar actualizado
 
 ```
 src/scss/
@@ -278,10 +279,10 @@ $font-family-base: 'Open Sans', sans-serif;
 $font-family-headings: 'Montserrat', sans-serif;
 ```
 
-## 📱 JavaScript Architecture
+## JavaScript Architecture
 
 ### Estructura de Scripts
-
+Forma en la que debe quedar actualizada
 ```
 src/js/
 ├── main.js              # Entry point
@@ -486,16 +487,16 @@ Instalar plugin Query Monitor para:
 - Ver hooks ejecutados
 - Monitorear AJAX requests
 
-## 📦 Deployment
+## Deployment
 
 ### Checklist Pre-Deploy
 
-- [ ] Desactivar WP_DEBUG
-- [ ] Compilar assets (npm run build)
-- [ ] Limpiar archivos temporales
-- [ ] Verificar .gitignore
-- [ ] Backup de base de datos
-- [ ] Probar en ambiente staging
+Desactivar WP_DEBUG
+Compilar assets (npm run build)
+Limpiar archivos temporales
+Verificar .gitignore
+Backup de base de datos
+Probar en ambiente staging
 
 ### Comandos útiles
 
@@ -511,7 +512,7 @@ npm install --production
 zip -r themereforestamos.zip . -x "node_modules/*" "src/*" ".git/*"
 ```
 
-## 🔄 Flujos de Trabajo Comunes
+## Flujos de Trabajo Comunes
 
 ### Agregar un Nuevo Custom Post Type
 
@@ -537,7 +538,7 @@ zip -r themereforestamos.zip . -x "node_modules/*" "src/*" ".git/*"
 3. Verificar en navegador
 4. Commit cambios
 
-## 📚 Referencias Técnicas
+## Referencias Técnicas
 
 ### WordPress APIs
 
