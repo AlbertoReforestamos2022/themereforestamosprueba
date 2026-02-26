@@ -38,7 +38,8 @@
                         
                     <!-- Demás imagenes Carrusel  -->
                     <div class="carousel-item imgs-carrusel">
-                        <a href="<?php echo $imagen['url_imagen_carousel']?>">
+                        <?php $condicion_url_img = empty($imagen['url_imagen_carousel'] ? $imagen['url_imagen_carousel'] : '#')?>
+                        <a href="<?php echo $condicion_url_img; ?> ">
                             <img src="<?php echo $imagen['imagen_carousel']?>" class="img-fluid imagen-carousel"  alt="Imagen carousel" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                         </a>
                         <rect width="100%" height="100%" fill="#777"/>
@@ -82,7 +83,7 @@
                 foreach($lineas as $linea) {
             ?>  
             <div class="col d-flex justify-content-center col-lineas-accion">
-                <div class="card border-primary shadow-lg mb-3 espacio-card-lineas" style="width:16rem;">
+                <div class="card border-primary shadow mb-3 espacio-card-lineas" style="width:16rem;">
                     <div class="card-header bg-transparent border-0 d-flex justify-content-center card-lineas">
                         <img class="linea-accion-img img-lineas" src="<?php echo $linea['imagen_linea_acción']?>" alt="">
                     </div>

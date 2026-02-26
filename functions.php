@@ -56,22 +56,22 @@ require_once dirname(__FILE__) . '/inc/DeepL/config/save-json-text.php';
 
 /** Micrositios Árboles y ciudades / Red OJA */
 // Arboles y Ciudades components
-require_once dirname(__FILE__) . '/inc/arboles_ciudades_components/update_recognized_states_json.php';
+# require_once dirname(__FILE__) . '/inc/arboles_ciudades_components/update_recognized_states_json.php';
 
 
 // Red Oja components 
-require_once dirname(__FILE__) . '/inc/red_oja_components/update_institutions_json.php';
-require_once dirname(__FILE__) . '/inc/red_oja_components/update_dates_files_section.php';
+# require_once dirname(__FILE__) . '/inc/red_oja_components/update_institutions_json.php';
+# require_once dirname(__FILE__) . '/inc/red_oja_components/update_dates_files_section.php';
 
 
 
 /** 
  * PHPSpreadsheet 
  **/
-require_once dirname(__FILE__) . '/inc/html-reading-office/vendor/autoload.php';
+# require_once dirname(__FILE__) . '/inc/html-reading-office/vendor/autoload.php';
 
 // función leer excel 
-require_once dirname(__FILE__) . '/inc/html-reading-office/leer-excel.php';
+# require_once dirname(__FILE__) . '/inc/html-reading-office/leer-excel.php';
 
 
 /**
@@ -137,6 +137,7 @@ add_action('wp_enqueue_scripts', 'enqueue_bootstrap_for_cpt');
 /** 
  * Función que muestra la imagen destacada en el page 
  **/
+
 add_action('init', 'reforestamos_imagen_destacada');
 function reforestamos_imagen_destacada($id) { 
     $imagen = get_the_post_thumbnail_url($id, 'full'); 
