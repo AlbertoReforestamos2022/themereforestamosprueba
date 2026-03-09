@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/contacto",
+  "title": "Contacto",
+  "category": "reforestamos",
+  "icon": "email",
+  "description": "Formulario de contacto con información de contacto configurable",
+  "keywords": ["contact", "form", "email", "contacto", "formulario"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "formId": {
+      "type": "string",
+      "default": ""
+    },
+    "showPhone": {
+      "type": "boolean",
+      "default": true
+    },
+    "showAddress": {
+      "type": "boolean",
+      "default": true
+    },
+    "showEmail": {
+      "type": "boolean",
+      "default": true
+    },
+    "showMap": {
+      "type": "boolean",
+      "default": false
+    },
+    "phoneNumber": {
+      "type": "string",
+      "default": "+52 55 1234 5678"
+    },
+    "emailAddress": {
+      "type": "string",
+      "default": "contacto@reforestamos.org"
+    },
+    "address": {
+      "type": "string",
+      "default": "Ciudad de México, México"
+    },
+    "mapEmbedUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "formTitle": {
+      "type": "string",
+      "default": "Envíanos un mensaje"
+    },
+    "infoTitle": {
+      "type": "string",
+      "default": "Información de contacto"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

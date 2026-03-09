@@ -1,0 +1,6 @@
+# Languages Directory
+
+This directory will contain translation files:
+- reforestamos-core.pot (template file)
+- es_MX.po / es_MX.mo (Spanish translations)
+- en_US.po / en_US.mo (English translations)

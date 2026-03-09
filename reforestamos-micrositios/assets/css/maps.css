@@ -1,0 +1,374 @@
+/**
+ * Maps Styles
+ * 
+ * Styles for Leaflet maps and microsites.
+ * 
+ * @package Reforestamos_Micrositios
+ * @since 1.0.0
+ */
+
+/* ==========================================================================
+   Microsite Container
+   ========================================================================== */
+
+.reforestamos-microsite {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+/* ==========================================================================
+   Filters Section
+   ========================================================================== */
+
+.microsite-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.microsite-filters .form-select,
+.microsite-filters .form-control {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.microsite-filters .form-select:focus,
+.microsite-filters .form-control:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+/* ==========================================================================
+   Map Container
+   ========================================================================== */
+
+#arboles-map,
+#oja-map {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   Map Popup Styles
+   ========================================================================== */
+
+.map-popup-content {
+    padding: 0.5rem;
+    min-width: 200px;
+}
+
+.map-popup-content h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2E7D32;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.map-popup-content .scientific-name {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.map-popup-content p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.map-popup-content strong {
+    color: #333;
+}
+
+.map-popup-content .btn {
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   Statistics Section
+   ========================================================================== */
+
+.microsite-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2E7D32;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Directory View
+   ========================================================================== */
+
+.microsite-directory {
+    margin-top: 2rem;
+}
+
+.directory-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.directory-item {
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.directory-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.directory-item h4 {
+    margin: 0 0 0.75rem 0;
+    color: #2E7D32;
+    font-size: 1.2rem;
+}
+
+.directory-item p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.directory-item .btn {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+}
+
+.directory-item .view-on-map {
+    background-color: #66BB6A;
+    border-color: #66BB6A;
+    color: white;
+}
+
+.directory-item .view-on-map:hover {
+    background-color: #2E7D32;
+    border-color: #2E7D32;
+}
+
+/* Layout for both map and directory view */
+.red-oja.view-both {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 992px) {
+    .red-oja.view-both #oja-map {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================================================
+   Leaflet Customization
+   ========================================================================== */
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+}
+
+.leaflet-popup-tip {
+    background: white;
+}
+
+/* Custom marker cluster styles (if using marker clustering) */
+.marker-cluster-small {
+    background-color: rgba(46, 125, 50, 0.6);
+}
+
+.marker-cluster-small div {
+    background-color: rgba(46, 125, 50, 0.8);
+}
+
+.marker-cluster-medium {
+    background-color: rgba(102, 187, 106, 0.6);
+}
+
+.marker-cluster-medium div {
+    background-color: rgba(102, 187, 106, 0.8);
+}
+
+.marker-cluster-large {
+    background-color: rgba(255, 167, 38, 0.6);
+}
+
+.marker-cluster-large div {
+    background-color: rgba(255, 167, 38, 0.8);
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .microsite-filters {
+        flex-direction: column;
+    }
+    
+    .microsite-filters .form-select,
+    .microsite-filters .form-control {
+        width: 100%;
+        min-width: 100%;
+    }
+    
+    .microsite-stats {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        min-width: 100%;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .directory-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #arboles-map,
+    #oja-map {
+        height: 400px !important;
+    }
+    
+    .stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* ==========================================================================
+   Loading State
+   ========================================================================== */
+
+.microsite-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    color: #666;
+}
+
+.microsite-loading::after {
+    content: "Cargando...";
+    font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   Error State
+   ========================================================================== */
+
+.microsite-error {
+    padding: 2rem;
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    color: #856404;
+    text-align: center;
+}
+
+.microsite-error h4 {
+    margin: 0 0 0.5rem 0;
+    color: #856404;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles for keyboard navigation */
+.microsite-filters .form-select:focus,
+.microsite-filters .form-control:focus,
+.directory-item:focus-within {
+    outline: 2px solid #2E7D32;
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .microsite-filters {
+        display: none;
+    }
+    
+    #arboles-map,
+    #oja-map {
+        page-break-inside: avoid;
+    }
+    
+    .microsite-stats {
+        page-break-inside: avoid;
+    }
+}

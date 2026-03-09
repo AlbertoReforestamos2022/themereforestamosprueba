@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/documents",
+  "title": "Documents",
+  "category": "reforestamos",
+  "icon": "media-document",
+  "description": "Lista de documentos descargables con filtros y ordenamiento",
+  "keywords": ["documents", "documentos", "descargas", "archivos", "pdf"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "documents": {
+      "type": "array",
+      "default": []
+    },
+    "category": {
+      "type": "string",
+      "default": ""
+    },
+    "sortBy": {
+      "type": "string",
+      "default": "date"
+    },
+    "displayStyle": {
+      "type": "string",
+      "default": "list"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

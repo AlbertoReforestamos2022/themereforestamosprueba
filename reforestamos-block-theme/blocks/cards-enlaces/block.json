@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/cards-enlaces",
+  "title": "Cards Enlaces",
+  "category": "reforestamos",
+  "icon": "grid-view",
+  "description": "Grid de tarjetas con enlaces para navegación o destacar secciones importantes",
+  "keywords": ["cards", "tarjetas", "enlaces", "links", "grid"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "cards": {
+      "type": "array",
+      "default": []
+    },
+    "columns": {
+      "type": "number",
+      "default": 3
+    },
+    "cardStyle": {
+      "type": "string",
+      "default": "default"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

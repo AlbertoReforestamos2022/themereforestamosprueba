@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/header-navbar",
+  "title": "Header Navbar",
+  "category": "reforestamos",
+  "icon": "menu",
+  "description": "Navegación principal con Bootstrap 5, logo y language switcher",
+  "keywords": ["header", "navbar", "navigation", "menu", "language"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "menuId": {
+      "type": "string",
+      "default": ""
+    },
+    "logo": {
+      "type": "object",
+      "default": {
+        "url": "",
+        "alt": "",
+        "id": null
+      }
+    },
+    "sticky": {
+      "type": "boolean",
+      "default": false
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "white"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "dark"
+    },
+    "showLanguageSwitcher": {
+      "type": "boolean",
+      "default": true
+    },
+    "transparentOnTop": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

@@ -1,0 +1,7 @@
+# This directory will contain custom Gutenberg blocks
+# Each block will have its own subdirectory with:
+# - block.json
+# - edit.js
+# - save.js
+# - style.scss
+# - index.js

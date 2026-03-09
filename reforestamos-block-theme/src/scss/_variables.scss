@@ -1,0 +1,43 @@
+/**
+ * SCSS Variables
+ * 
+ * @package Reforestamos
+ */
+
+// Colors - matching theme.json
+$color-primary: #2E7D32;
+$color-secondary: #66BB6A;
+$color-accent: #FFA726;
+$color-dark: #1B5E20;
+$color-light: #F1F8E9;
+$color-white: #FFFFFF;
+$color-black: #212121;
+
+// Typography
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+// Font sizes
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 20px;
+$font-size-xlarge: 28px;
+$font-size-xxlarge: 36px;
+
+// Layout
+$content-width: 1140px;
+$wide-width: 1320px;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Breakpoints (Bootstrap 5)
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;

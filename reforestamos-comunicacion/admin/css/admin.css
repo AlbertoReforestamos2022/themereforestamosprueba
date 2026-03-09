@@ -1,0 +1,181 @@
+/**
+ * Admin Styles for Reforestamos Comunicación
+ *
+ * @package Reforestamos_Comunicacion
+ * @since 1.0.0
+ */
+
+/* Admin Dashboard Styles */
+.reforestamos-comm-dashboard {
+	max-width: 1200px;
+	margin: 20px 0;
+}
+
+.reforestamos-comm-dashboard h2 {
+	color: #2E7D32;
+	margin-bottom: 20px;
+}
+
+/* Settings Page Styles */
+.reforestamos-comm-settings {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.reforestamos-comm-settings .form-table th {
+	width: 200px;
+	padding: 20px 10px 20px 0;
+}
+
+.reforestamos-comm-settings .form-table td {
+	padding: 15px 10px;
+}
+
+/* Test Email Button */
+.reforestamos-test-email {
+	margin-top: 10px;
+}
+
+/* Status Messages */
+.reforestamos-comm-notice {
+	padding: 10px 15px;
+	margin: 15px 0;
+	border-left: 4px solid;
+}
+
+.reforestamos-comm-notice.success {
+	background-color: #d4edda;
+	border-color: #28a745;
+	color: #155724;
+}
+
+.reforestamos-comm-notice.error {
+	background-color: #f8d7da;
+	border-color: #dc3545;
+	color: #721c24;
+}
+
+/* Subscribers Table */
+.reforestamos-subscribers-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.reforestamos-subscribers-table th,
+.reforestamos-subscribers-table td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.reforestamos-subscribers-table th {
+	background-color: #f9f9f9;
+	font-weight: 600;
+}
+
+.reforestamos-subscribers-table tr:hover {
+	background-color: #f5f5f5;
+}
+
+/* Status Badges */
+.status-badge {
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.status-badge.active {
+	background-color: #d4edda;
+	color: #155724;
+}
+
+.status-badge.unsubscribed {
+	background-color: #f8d7da;
+	color: #721c24;
+}
+
+/* ChatBot Configuration */
+.reforestamos-chatbot-config {
+	background: #fff;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.chatbot-response-item {
+	background: #f9f9f9;
+	padding: 15px;
+	margin-bottom: 10px;
+	border-left: 3px solid #2E7D32;
+}
+
+/* Contact Form Submissions Styles */
+.submission-status {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.submission-status-new {
+	background-color: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.submission-status-read {
+	background-color: #e2e3e5;
+	color: #383d41;
+	border: 1px solid #d6d8db;
+}
+
+.submission-status-archived {
+	background-color: #d1ecf1;
+	color: #0c5460;
+	border: 1px solid #bee5eb;
+}
+
+.submission-details {
+	background-color: #f9f9f9;
+}
+
+.submission-message-box {
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin: 10px 0;
+}
+
+.submission-message-box h3 {
+	margin-top: 0;
+	color: #2E7D32;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.submission-message-box p {
+	line-height: 1.6;
+	color: #333;
+	margin: 0;
+}
+
+/* Responsive table for submissions */
+@media screen and (max-width: 782px) {
+	.wp-list-table.submissions-table th,
+	.wp-list-table.submissions-table td {
+		display: block;
+		width: 100%;
+	}
+	
+	.submission-status {
+		display: inline-block;
+		margin: 5px 0;
+	}
+}

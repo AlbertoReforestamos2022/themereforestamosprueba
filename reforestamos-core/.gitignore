@@ -1,0 +1,37 @@
+# WordPress
+.DS_Store
+Thumbs.db
+
+# Composer
+/vendor/
+/lib/
+composer.lock
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build files
+/build/
+/dist/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.phpintel/
+
+# Testing
+/tmp/
+/tests/tmp/
+phpunit.xml
+.phpunit.result.cache
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log

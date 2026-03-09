@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/hero",
+  "title": "Hero Section",
+  "category": "reforestamos",
+  "icon": "cover-image",
+  "description": "Sección hero con imagen de fondo y texto destacado",
+  "keywords": ["hero", "banner", "header"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "subtitle": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundImage": {
+      "type": "object",
+      "default": {
+        "url": "",
+        "alt": "",
+        "id": null
+      }
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Conoce más"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 0.5
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "minHeight": {
+      "type": "string",
+      "default": "500px"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

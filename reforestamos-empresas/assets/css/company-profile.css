@@ -1,0 +1,342 @@
+/**
+ * Company Profile Template Styles
+ *
+ * Responsive styles for single company profile display
+ *
+ * @package Reforestamos_Empresas
+ */
+
+/* Company Profile Wrapper */
+.company-profile-wrapper {
+	padding: 60px 0;
+	background-color: #f8f9fa;
+}
+
+.company-profile {
+	background: white;
+	border-radius: 8px;
+	padding: 40px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Company Header */
+.company-header {
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #e9ecef;
+}
+
+.company-logo {
+	text-align: center;
+	padding: 20px;
+	background: #f8f9fa;
+	border-radius: 8px;
+}
+
+.company-logo img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+}
+
+.company-logo-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+	background: #e9ecef;
+	border-radius: 8px;
+}
+
+.company-logo-placeholder .dashicons {
+	font-size: 80px;
+	width: 80px;
+	height: 80px;
+	color: #adb5bd;
+}
+
+.company-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #2E7D32;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+
+.company-meta {
+	margin-bottom: 10px;
+	font-size: 1rem;
+}
+
+.company-meta .meta-label {
+	font-weight: 600;
+	color: #495057;
+	margin-right: 8px;
+}
+
+.company-meta .meta-value {
+	color: #6c757d;
+}
+
+.company-website {
+	margin-top: 20px;
+}
+
+.company-website .btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.company-website .dashicons {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+/* Company Description */
+.company-description {
+	margin-bottom: 40px;
+}
+
+.company-description h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #2E7D32;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #66BB6A;
+}
+
+.description-content {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #495057;
+}
+
+.description-content p {
+	margin-bottom: 15px;
+}
+
+/* Company Gallery */
+.company-gallery {
+	margin-bottom: 40px;
+}
+
+.company-gallery h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #2E7D32;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #66BB6A;
+}
+
+.gallery-item {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+	transform: scale(1.05);
+}
+
+/* Company Contact */
+.company-contact {
+	margin-bottom: 40px;
+	padding: 30px;
+	background: #f8f9fa;
+	border-radius: 8px;
+}
+
+.company-contact h2 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #2E7D32;
+	margin-bottom: 25px;
+}
+
+.contact-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	padding: 15px;
+	background: white;
+	border-radius: 6px;
+	height: 100%;
+}
+
+.contact-item .dashicons {
+	font-size: 32px;
+	width: 32px;
+	height: 32px;
+	color: #2E7D32;
+	flex-shrink: 0;
+}
+
+.contact-info {
+	flex: 1;
+}
+
+.contact-info strong {
+	display: block;
+	font-size: 0.9rem;
+	color: #6c757d;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.contact-info a {
+	color: #2E7D32;
+	text-decoration: none;
+	font-size: 1.1rem;
+	transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+	color: #1B5E20;
+	text-decoration: underline;
+}
+
+.contact-info p {
+	margin: 0;
+	color: #495057;
+	font-size: 1rem;
+	line-height: 1.6;
+}
+
+/* Company Navigation */
+.company-navigation {
+	text-align: center;
+	padding-top: 30px;
+	border-top: 2px solid #e9ecef;
+}
+
+.company-navigation .btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 30px;
+	font-size: 1rem;
+}
+
+.company-navigation .dashicons {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+	.company-profile {
+		padding: 30px;
+	}
+	
+	.company-title {
+		font-size: 2rem;
+	}
+	
+	.company-description h2,
+	.company-gallery h2,
+	.company-contact h2 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.company-profile-wrapper {
+		padding: 30px 0;
+	}
+	
+	.company-profile {
+		padding: 20px;
+		border-radius: 0;
+	}
+	
+	.company-header {
+		text-align: center;
+	}
+	
+	.company-title {
+		font-size: 1.75rem;
+	}
+	
+	.company-logo {
+		margin-bottom: 20px;
+	}
+	
+	.company-meta {
+		justify-content: center;
+	}
+	
+	.gallery-item img {
+		height: 200px;
+	}
+	
+	.contact-item {
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.contact-item .dashicons {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 575px) {
+	.company-title {
+		font-size: 1.5rem;
+	}
+	
+	.description-content {
+		font-size: 1rem;
+	}
+	
+	.gallery-item img {
+		height: 180px;
+	}
+	
+	.company-contact {
+		padding: 20px;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.company-profile-wrapper {
+		background: white;
+		padding: 0;
+	}
+	
+	.company-profile {
+		box-shadow: none;
+		padding: 20px;
+	}
+	
+	.company-navigation,
+	.company-website {
+		display: none;
+	}
+	
+	.gallery-item:hover {
+		transform: none;
+		box-shadow: none;
+	}
+}

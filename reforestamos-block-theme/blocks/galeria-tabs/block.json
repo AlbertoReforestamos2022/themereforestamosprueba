@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/galeria-tabs",
+  "title": "Galería con Tabs",
+  "category": "reforestamos",
+  "icon": "format-gallery",
+  "description": "Galería de imágenes con pestañas de categorías y lightbox integrado",
+  "keywords": ["galería", "gallery", "tabs", "pestañas", "imágenes", "lightbox"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "galleries": {
+      "type": "array",
+      "default": []
+    },
+    "defaultTab": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

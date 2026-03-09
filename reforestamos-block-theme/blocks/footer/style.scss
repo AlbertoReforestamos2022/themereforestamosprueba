@@ -1,0 +1,185 @@
+/**
+ * Footer Block Styles
+ * 
+ * @package Reforestamos
+ */
+
+.reforestamos-footer {
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+    
+    .footer-content {
+        .row {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column {
+            margin-bottom: 2rem;
+            
+            .footer-column-title {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                color: inherit;
+            }
+            
+            .footer-column-content {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+                opacity: 0.9;
+            }
+            
+            .footer-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                
+                li {
+                    margin-bottom: 0.5rem;
+                }
+                
+                .footer-link {
+                    color: inherit;
+                    text-decoration: none;
+                    font-size: 0.95rem;
+                    opacity: 0.85;
+                    transition: opacity 0.3s ease, transform 0.2s ease;
+                    display: inline-block;
+                    
+                    &:hover {
+                        opacity: 1;
+                        transform: translateX(5px);
+                        text-decoration: underline;
+                    }
+                }
+            }
+            
+            // Estilos para el editor
+            .footer-link-item {
+                margin-bottom: 0.5rem;
+                padding: 0.5rem;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                
+                input {
+                    margin-bottom: 0.25rem;
+                }
+                
+                button {
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+    
+    .footer-social {
+        padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            
+            .social-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                color: inherit;
+                text-decoration: none;
+                font-size: 1.25rem;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                    transform: translateY(-3px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                
+                i {
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    
+    .footer-copyright {
+        text-align: center;
+        padding: 1rem 0;
+        
+        .copyright-text {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    }
+    
+    // Responsive
+    @media (max-width: 768px) {
+        padding: 2rem 0 1rem;
+        margin-top: 2rem;
+        
+        .footer-content {
+            .footer-column {
+                margin-bottom: 1.5rem;
+                text-align: center;
+                
+                .footer-column-title {
+                    font-size: 1.1rem;
+                }
+                
+                .footer-links {
+                    .footer-link {
+                        &:hover {
+                            transform: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .footer-social {
+            padding: 1.5rem 0;
+            
+            .social-links {
+                gap: 1rem;
+                
+                .social-link {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .footer-content {
+            .row {
+                .footer-column {
+                    // En móvil, cada columna ocupa todo el ancho
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Estilos específicos para el editor
+.wp-block-reforestamos-footer {
+    .footer-link-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

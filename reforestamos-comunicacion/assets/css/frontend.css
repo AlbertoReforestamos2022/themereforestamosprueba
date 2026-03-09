@@ -1,0 +1,272 @@
+/**
+ * Frontend Styles for Reforestamos Comunicación
+ *
+ * @package Reforestamos_Comunicacion
+ * @since 1.0.0
+ */
+
+/* Contact Form Styles */
+.reforestamos-contact-form {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Honeypot field - hidden from users but visible to bots (Requirement 9.7) */
+.reforestamos-contact-form .form-field-hp {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.reforestamos-contact-form h3 {
+	color: #2E7D32;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.reforestamos-contact-form .form-group {
+	margin-bottom: 20px;
+}
+
+.reforestamos-contact-form label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+	color: #333;
+}
+
+.reforestamos-contact-form .form-control {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.reforestamos-contact-form .form-control:focus {
+	outline: none;
+	border-color: #2E7D32;
+	box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.reforestamos-contact-form textarea.form-control {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.reforestamos-contact-form .btn {
+	background-color: #2E7D32;
+	color: white;
+	padding: 12px 30px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.reforestamos-contact-form .btn:hover {
+	background-color: #1B5E20;
+}
+
+.reforestamos-contact-form .btn:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.reforestamos-contact-form .form-messages {
+	margin-top: 20px;
+}
+
+.reforestamos-contact-form .alert {
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+.reforestamos-contact-form .alert-success {
+	background-color: #d4edda;
+	border: 1px solid #c3e6cb;
+	color: #155724;
+}
+
+.reforestamos-contact-form .alert-danger {
+	background-color: #f8d7da;
+	border: 1px solid #f5c6cb;
+	color: #721c24;
+}
+
+/* Newsletter Subscription Form */
+.reforestamos-newsletter-form {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 30px;
+	background: #f9f9f9;
+	border-radius: 8px;
+}
+
+.reforestamos-newsletter-form h3 {
+	color: #2E7D32;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.reforestamos-newsletter-form .form-group {
+	margin-bottom: 15px;
+}
+
+.reforestamos-newsletter-form input[type="email"],
+.reforestamos-newsletter-form input[type="text"] {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+.reforestamos-newsletter-form button {
+	width: 100%;
+	background-color: #2E7D32;
+	color: white;
+	padding: 12px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.reforestamos-newsletter-form button:hover {
+	background-color: #1B5E20;
+}
+
+/* ChatBot Widget */
+#reforestamos-chatbot-widget {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 350px;
+	max-height: 500px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	display: none;
+	flex-direction: column;
+	z-index: 9999;
+}
+
+#reforestamos-chatbot-widget.open {
+	display: flex;
+}
+
+.chatbot-header {
+	background-color: #2E7D32;
+	color: white;
+	padding: 15px;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.chatbot-header h4 {
+	margin: 0;
+	font-size: 18px;
+}
+
+#reforestamos-chatbot-close {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 0;
+	line-height: 1;
+}
+
+#reforestamos-chatbot-messages {
+	flex: 1;
+	padding: 15px;
+	overflow-y: auto;
+	max-height: 350px;
+}
+
+.chatbot-message {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 8px;
+	max-width: 80%;
+}
+
+.chatbot-message.user {
+	background-color: #2E7D32;
+	color: white;
+	margin-left: auto;
+	text-align: right;
+}
+
+.chatbot-message.bot {
+	background-color: #f1f1f1;
+	color: #333;
+}
+
+#reforestamos-chatbot-form {
+	padding: 15px;
+	border-top: 1px solid #ddd;
+	display: flex;
+	gap: 10px;
+}
+
+#reforestamos-chatbot-form input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+#reforestamos-chatbot-form button {
+	background-color: #2E7D32;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#reforestamos-chatbot-toggle {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background-color: #2E7D32;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	z-index: 9998;
+	transition: transform 0.3s;
+}
+
+#reforestamos-chatbot-toggle:hover {
+	transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	#reforestamos-chatbot-widget {
+		width: calc(100% - 40px);
+		right: 20px;
+		left: 20px;
+	}
+	
+	.reforestamos-contact-form,
+	.reforestamos-newsletter-form {
+		padding: 15px;
+	}
+}

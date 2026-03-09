@@ -1,0 +1,83 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/footer",
+  "title": "Footer",
+  "category": "reforestamos",
+  "icon": "layout",
+  "description": "Pie de página con columnas, redes sociales y copyright",
+  "keywords": ["footer", "pie", "social", "copyright", "columnas"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "columns": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Sobre Nosotros",
+          "content": "",
+          "links": []
+        },
+        {
+          "title": "Enlaces Rápidos",
+          "content": "",
+          "links": []
+        },
+        {
+          "title": "Contacto",
+          "content": "",
+          "links": []
+        }
+      ]
+    },
+    "social": {
+      "type": "array",
+      "default": [
+        {
+          "name": "Facebook",
+          "url": "",
+          "icon": "facebook"
+        },
+        {
+          "name": "Twitter",
+          "url": "",
+          "icon": "twitter"
+        },
+        {
+          "name": "Instagram",
+          "url": "",
+          "icon": "instagram"
+        }
+      ]
+    },
+    "copyright": {
+      "type": "string",
+      "default": "© 2024 Reforestamos México. Todos los derechos reservados."
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#1B5E20"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "columnCount": {
+      "type": "number",
+      "default": 3
+    },
+    "showSocial": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

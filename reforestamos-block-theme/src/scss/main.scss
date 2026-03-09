@@ -1,0 +1,37 @@
+/**
+ * Main SCSS file for Reforestamos Block Theme
+ * 
+ * @package Reforestamos
+ */
+
+// Variables
+@import 'variables';
+
+// Mixins
+@import 'mixins';
+
+// Responsive utilities
+@import 'responsive';
+
+// Accessibility
+@import 'accessibility';
+
+// Components
+@import 'components/language-switcher';
+@import 'components/responsive-navigation';
+@import 'components/search';
+@import 'components/events-calendar';
+
+// Block styles
+@import '../../blocks/hero/style';
+@import '../../blocks/texto-imagen/style';
+@import '../../blocks/cards-iniciativas/style';
+@import '../../blocks/timeline/style';
+@import '../../blocks/documents/style';
+@import '../../blocks/galeria-tabs/style';
+@import '../../blocks/logos-aliados/style';
+@import '../../blocks/sobre-nosotros/style';
+@import '../../blocks/eventos-proximos/style';
+@import '../../blocks/header-navbar/style';
+@import '../../blocks/footer/style';
+@import '../../blocks/contacto/style';

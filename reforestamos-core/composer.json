@@ -1,0 +1,43 @@
+{
+  "name": "reforestamos/reforestamos-core",
+  "description": "Core functionality plugin for Reforestamos México - Custom Post Types, Taxonomies, and REST API",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Reforestamos México",
+      "homepage": "https://reforestamos.org"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "composer/installers": "^1.0 || ^2.0",
+    "cmb2/cmb2": "^2.10"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "wp-coding-standards/wpcs": "^2.3",
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+  "autoload": {
+    "classmap": [
+      "includes/"
+    ]
+  },
+  "scripts": {
+    "test": "phpunit",
+    "phpcs": "phpcs --standard=WordPress includes/ reforestamos-core.php",
+    "phpcbf": "phpcbf --standard=WordPress includes/ reforestamos-core.php"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "lib/{$name}/": ["cmb2/cmb2"]
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-01-15",
+  "arboles": [
+    {
+      "id": 1,
+      "especie": "Pino",
+      "nombre_cientifico": "Pinus montezumae",
+      "ciudad": "Ciudad de México",
+      "estado": "CDMX",
+      "ubicacion": {
+        "lat": 19.2827,
+        "lng": -99.1654
+      },
+      "fecha_plantacion": "2023-06-15",
+      "cantidad": 500,
+      "descripcion": "Reforestación en el Ajusco",
+      "proyecto": "Bosques Urbanos CDMX"
+    },
+    {
+      "id": 2,
+      "especie": "Oyamel",
+      "nombre_cientifico": "Abies religiosa",
+      "ciudad": "Toluca",
+      "estado": "Estado de México",
+      "ubicacion": {
+        "lat": 19.2926,
+        "lng": -99.6568
+      },
+      "fecha_plantacion": "2023-08-20",
+      "cantidad": 300,
+      "descripcion": "Reforestación en el Nevado de Toluca",
+      "proyecto": "Protección de Bosques"
+    },
+    {
+      "id": 3,
+      "especie": "Encino",
+      "nombre_cientifico": "Quercus rugosa",
+      "ciudad": "Guadalajara",
+      "estado": "Jalisco",
+      "ubicacion": {
+        "lat": 20.6597,
+        "lng": -103.3496
+      },
+      "fecha_plantacion": "2023-09-10",
+      "cantidad": 400,
+      "descripcion": "Reforestación en el Bosque La Primavera",
+      "proyecto": "Bosques de Jalisco"
+    },
+    {
+      "id": 4,
+      "especie": "Cedro",
+      "nombre_cientifico": "Cedrela odorata",
+      "ciudad": "Monterrey",
+      "estado": "Nuevo León",
+      "ubicacion": {
+        "lat": 25.6866,
+        "lng": -100.3161
+      },
+      "fecha_plantacion": "2023-10-05",
+      "cantidad": 250,
+      "descripcion": "Reforestación en el Parque Ecológico Chipinque",
+      "proyecto": "Reforestación Urbana"
+    },
+    {
+      "id": 5,
+      "especie": "Ahuehuete",
+      "nombre_cientifico": "Taxodium mucronatum",
+      "ciudad": "Puebla",
+      "estado": "Puebla",
+      "ubicacion": {
+        "lat": 19.0414,
+        "lng": -98.2063
+      },
+      "fecha_plantacion": "2023-11-12",
+      "cantidad": 150,
+      "descripcion": "Reforestación en zonas ribereñas",
+      "proyecto": "Ríos Vivos"
+    },
+    {
+      "id": 6,
+      "especie": "Mezquite",
+      "nombre_cientifico": "Prosopis laevigata",
+      "ciudad": "Querétaro",
+      "estado": "Querétaro",
+      "ubicacion": {
+        "lat": 20.5888,
+        "lng": -100.3899
+      },
+      "fecha_plantacion": "2023-07-22",
+      "cantidad": 200,
+      "descripcion": "Reforestación en zonas semiáridas",
+      "proyecto": "Bosques Secos"
+    }
+  ],
+  "especies": [
+    {
+      "nombre": "Pino",
+      "nombre_cientifico": "Pinus montezumae",
+      "descripcion": "Árbol nativo de México, común en zonas montañosas"
+    },
+    {
+      "nombre": "Oyamel",
+      "nombre_cientifico": "Abies religiosa",
+      "descripcion": "Conífera endémica de México, hábitat de la mariposa monarca"
+    },
+    {
+      "nombre": "Encino",
+      "nombre_cientifico": "Quercus rugosa",
+      "descripcion": "Árbol de hoja perenne, importante para la biodiversidad"
+    },
+    {
+      "nombre": "Cedro",
+      "nombre_cientifico": "Cedrela odorata",
+      "descripcion": "Árbol de madera preciosa, importante para la reforestación"
+    },
+    {
+      "nombre": "Ahuehuete",
+      "nombre_cientifico": "Taxodium mucronatum",
+      "descripcion": "Árbol nacional de México, crece cerca del agua"
+    },
+    {
+      "nombre": "Mezquite",
+      "nombre_cientifico": "Prosopis laevigata",
+      "descripcion": "Árbol resistente a la sequía, importante en zonas áridas"
+    }
+  ],
+  "ciudades": [
+    {
+      "nombre": "Ciudad de México",
+      "estado": "CDMX",
+      "total_arboles": 500,
+      "coordenadas": {
+        "lat": 19.4326,
+        "lng": -99.1332
+      }
+    },
+    {
+      "nombre": "Toluca",
+      "estado": "Estado de México",
+      "total_arboles": 300,
+      "coordenadas": {
+        "lat": 19.2926,
+        "lng": -99.6568
+      }
+    },
+    {
+      "nombre": "Guadalajara",
+      "estado": "Jalisco",
+      "total_arboles": 400,
+      "coordenadas": {
+        "lat": 20.6597,
+        "lng": -103.3496
+      }
+    },
+    {
+      "nombre": "Monterrey",
+      "estado": "Nuevo León",
+      "total_arboles": 250,
+      "coordenadas": {
+        "lat": 25.6866,
+        "lng": -100.3161
+      }
+    },
+    {
+      "nombre": "Puebla",
+      "estado": "Puebla",
+      "total_arboles": 150,
+      "coordenadas": {
+        "lat": 19.0414,
+        "lng": -98.2063
+      }
+    },
+    {
+      "nombre": "Querétaro",
+      "estado": "Querétaro",
+      "total_arboles": 200,
+      "coordenadas": {
+        "lat": 20.5888,
+        "lng": -100.3899
+      }
+    }
+  ]
+}

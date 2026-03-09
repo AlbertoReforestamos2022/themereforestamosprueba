@@ -1,0 +1,211 @@
+/**
+ * Language Switcher Styles
+ *
+ * @package Reforestamos
+ */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    .lang-btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: inherit;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+        }
+        
+        &.active {
+            background-color: var(--wp--preset--color--primary, #2E7D32);
+            color: white;
+            border-color: var(--wp--preset--color--primary, #2E7D32);
+        }
+        
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .flag-icon {
+            font-size: 1.2em;
+            margin-right: 0.25rem;
+        }
+        
+        .lang-text {
+            font-family: var(--wp--preset--font-family--primary, 'Montserrat', sans-serif);
+        }
+    }
+    
+    .language-separator {
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: 300;
+    }
+}
+
+// Navbar specific styles
+.navbar {
+    .language-switcher {
+        margin-left: auto;
+        
+        .lang-btn {
+            color: inherit;
+            
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+    
+    &.navbar-light {
+        .language-switcher .lang-btn {
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+    
+    &.navbar-dark {
+        .language-switcher .lang-btn {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}
+
+// Mobile responsive
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        .language-switcher {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            justify-content: center;
+        }
+    }
+}
+
+// Translation link styles
+.translation-link {
+    margin: 1rem 0;
+    text-align: center;
+    
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        
+        &::before {
+            content: "🌐";
+            font-size: 1.2em;
+        }
+    }
+}
+
+// Translation link container (full-width box)
+.translation-link-container {
+    margin: 2rem 0;
+    padding: 0;
+    
+    .translation-link-box {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f7 100%);
+        border-left: 4px solid var(--wp--preset--color--primary, #2E7D32);
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        
+        .translation-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .translation-link-content {
+            flex: 1;
+            
+            .translation-link-label {
+                margin: 0 0 0.75rem 0;
+                font-size: 0.95rem;
+                color: #555;
+                font-weight: 500;
+            }
+            
+            .translation-link-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.625rem 1.25rem;
+                font-size: 0.95rem;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+}
+
+// Mobile responsive
+@media (max-width: 767.98px) {
+    .translation-link-container {
+        .translation-link-box {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+            
+            .translation-icon {
+                font-size: 2rem;
+            }
+            
+            .translation-link-content {
+                .translation-link-button {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+// Editor preview styles
+.reforestamos-header-navbar-editor {
+    .language-switcher-preview {
+        display: flex;
+        gap: 0.5rem;
+        
+        .lang-btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+            background: white;
+            cursor: pointer;
+            
+            &.active {
+                background-color: var(--wp--preset--color--primary, #2E7D32);
+                color: white;
+                border-color: var(--wp--preset--color--primary, #2E7D32);
+            }
+        }
+    }
+}

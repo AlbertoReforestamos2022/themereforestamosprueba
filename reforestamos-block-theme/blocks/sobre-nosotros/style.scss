@@ -1,0 +1,245 @@
+/**
+ * Sobre Nosotros Block Styles
+ * 
+ * @package Reforestamos
+ */
+
+.reforestamos-sobre-nosotros {
+    background-color: #f8f9fa;
+
+    .sobre-nosotros-intro {
+        max-width: 800px;
+        margin: 0 auto;
+
+        .sobre-nosotros-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--wp--preset--color--primary, #2E7D32);
+            margin-bottom: 1.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+
+        .sobre-nosotros-content {
+            font-size: 1.25rem;
+            color: #666;
+            line-height: 1.8;
+        }
+    }
+
+    // Estadísticas
+    .sobre-nosotros-stats {
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            .stat-icon {
+                font-size: 3rem;
+                color: var(--wp--preset--color--primary, #2E7D32);
+                display: block;
+                margin-bottom: 1rem;
+
+                &::before {
+                    display: inline-block;
+                }
+            }
+
+            .stat-value {
+                font-size: 3rem;
+                font-weight: 700;
+                color: var(--wp--preset--color--primary, #2E7D32);
+                line-height: 1;
+                margin-bottom: 0.5rem;
+
+                @media (max-width: 768px) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .stat-label {
+                font-size: 1rem;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    // Equipo
+    .sobre-nosotros-team {
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+                .team-photo img {
+                    transform: scale(1.05);
+                }
+            }
+
+            .team-photo {
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+                background-color: #e0e0e0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            .team-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                .team-name {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: var(--wp--preset--color--primary, #2E7D32);
+                    margin-bottom: 0.5rem;
+                }
+
+                .team-position {
+                    font-size: 1rem;
+                    color: var(--wp--preset--color--accent, #FFA726);
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                .team-bio {
+                    font-size: 0.95rem;
+                    color: #666;
+                    line-height: 1.6;
+                    margin-bottom: 1rem;
+                    flex: 1;
+                }
+
+                .team-social {
+                    display: flex;
+                    gap: 1rem;
+                    margin-top: auto;
+
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background-color: var(--wp--preset--color--primary, #2E7D32);
+                        color: white;
+                        text-decoration: none;
+                        transition: background-color 0.3s ease, transform 0.3s ease;
+
+                        &:hover {
+                            background-color: var(--wp--preset--color--secondary, #66BB6A);
+                            transform: scale(1.1);
+                        }
+
+                        i {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Editor styles
+    .block-editor & {
+        .stat-card,
+        .team-card {
+            cursor: pointer;
+        }
+
+        .team-social {
+            span {
+                display: inline-block;
+                padding: 0.25rem 0.5rem;
+                background-color: #e0e0e0;
+                border-radius: 4px;
+                font-size: 0.75rem;
+                margin-right: 0.25rem;
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+    .reforestamos-sobre-nosotros {
+        .sobre-nosotros-stats {
+            .stat-card {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .sobre-nosotros-team {
+            .team-card {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .reforestamos-sobre-nosotros {
+        .sobre-nosotros-intro {
+            .sobre-nosotros-title {
+                font-size: 1.75rem;
+            }
+
+            .sobre-nosotros-content {
+                font-size: 1rem;
+            }
+        }
+
+        .sobre-nosotros-stats {
+            .stat-card {
+                .stat-value {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .sobre-nosotros-team {
+            .team-card {
+                .team-photo {
+                    height: 250px;
+                }
+
+                .team-info {
+                    .team-name {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

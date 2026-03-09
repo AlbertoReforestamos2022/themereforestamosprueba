@@ -1,0 +1,8 @@
+# Tests Directory
+
+This directory will contain PHPUnit tests:
+- Unit tests for post types
+- Unit tests for taxonomies
+- Unit tests for custom fields
+- Unit tests for REST API endpoints
+- Integration tests

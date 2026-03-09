@@ -1,0 +1,119 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"1rem"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="padding-top:3rem;padding-bottom:1rem">
+        <!-- wp:query-title {"type":"archive","level":1,"style":{"typography":{"fontSize":"2.5rem","fontWeight":"700"},"color":{"text":"#2E7D32"},"spacing":{"margin":{"bottom":"1rem"}}}} /-->
+        
+        <!-- wp:term-description {"style":{"typography":{"fontSize":"1.1rem"},"color":{"text":"#666666"},"spacing":{"margin":{"bottom":"2rem"}}}} /-->
+    </div>
+    <!-- /wp:group -->
+    
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"3rem"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="padding-top:2rem;padding-bottom:3rem">
+        <!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"eventos","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"flex","columns":3}} -->
+        <div class="wp-block-query">
+            <!-- wp:post-template -->
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"radius":"12px"}},"backgroundColor":"white","className":"evento-card","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group evento-card has-white-background-color has-background" style="border-radius:12px;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0">
+                    <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","style":{"border":{"radius":{"top":"12px","right":"12px"}}}} /-->
+                    
+                    <!-- wp:group {"style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"1.5rem","right":"1.5rem"}}},"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group" style="padding-top:1.5rem;padding-bottom:1.5rem;padding-left:1.5rem;padding-right:1.5rem">
+                        <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"0.75rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"left"}} -->
+                        <div class="wp-block-group" style="margin-bottom:0.75rem">
+                            <!-- wp:post-date {"format":"j \\d\\e F, Y","style":{"typography":{"fontSize":"0.85rem","fontWeight":"600"},"color":{"text":"#66BB6A"}}} /-->
+                            
+                            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem"},"color":{"text":"#999999"}}} -->
+                            <p class="has-text-color" style="color:#999999;font-size:0.85rem">•</p>
+                            <!-- /wp:paragraph -->
+                            
+                            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem"},"color":{"text":"#666666"}}} -->
+                            <p class="has-text-color" style="color:#666666;font-size:0.85rem">📍 [Ubicación]</p>
+                            <!-- /wp:paragraph -->
+                        </div>
+                        <!-- /wp:group -->
+                        
+                        <!-- wp:post-title {"level":3,"isLink":true,"style":{"typography":{"fontSize":"1.25rem","fontWeight":"600","lineHeight":"1.3"},"color":{"text":"#1B5E20"},"spacing":{"margin":{"bottom":"0.75rem"}}}} /-->
+                        
+                        <!-- wp:post-excerpt {"moreText":"Leer más","excerptLength":20,"style":{"typography":{"fontSize":"0.95rem"},"color":{"text":"#666666"},"spacing":{"margin":{"bottom":"1rem"}}}} /-->
+                        
+                        <!-- wp:group {"style":{"spacing":{"padding":{"top":"1rem","bottom":"0"},"margin":{"top":"1rem"}},"border":{"top":{"color":"#E0E0E0","width":"1px"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+                        <div class="wp-block-group" style="border-top-color:#E0E0E0;border-top-width:1px;margin-top:1rem;padding-top:1rem;padding-bottom:0">
+                            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"600"},"color":{"text":"#2E7D32"}}} -->
+                            <p class="has-text-color" style="color:#2E7D32;font-size:0.85rem;font-weight:600">👥 [Capacidad]</p>
+                            <!-- /wp:paragraph -->
+                            
+                            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.85rem","fontWeight":"600"},"color":{"text":"#FFA726"}}} -->
+                            <p class="has-text-color" style="color:#FFA726;font-size:0.85rem;font-weight:600">[Estado: Abierto/Cerrado]</p>
+                            <!-- /wp:paragraph -->
+                        </div>
+                        <!-- /wp:group -->
+                    </div>
+                    <!-- /wp:group -->
+                </div>
+                <!-- /wp:group -->
+            <!-- /wp:post-template -->
+            
+            <!-- wp:query-pagination {"paginationArrow":"arrow","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"3rem"}}}} -->
+                <!-- wp:query-pagination-previous {"label":"Anterior"} /-->
+                
+                <!-- wp:query-pagination-numbers /-->
+                
+                <!-- wp:query-pagination-next {"label":"Siguiente"} /-->
+            <!-- /wp:query-pagination -->
+            
+            <!-- wp:query-no-results -->
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","left":"2rem","right":"2rem"}},"border":{"radius":"8px"},"color":{"background":"#F1F8E9"}},"layout":{"type":"constrained"}} -->
+                <div class="wp-block-group has-background" style="background-color:#F1F8E9;border-radius:8px;padding-top:3rem;padding-bottom:3rem;padding-left:2rem;padding-right:2rem">
+                    <!-- wp:heading {"textAlign":"center","style":{"color":{"text":"#1B5E20"}}} -->
+                    <h2 class="wp-block-heading has-text-align-center has-text-color" style="color:#1B5E20">No hay eventos disponibles</h2>
+                    <!-- /wp:heading -->
+                    
+                    <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#666666"}}} -->
+                    <p class="has-text-align-center has-text-color" style="color:#666666">Actualmente no hay eventos programados. Vuelve pronto para conocer nuestras próximas actividades de reforestación.</p>
+                    <!-- /wp:paragraph -->
+                    
+                    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+                    <div class="wp-block-buttons" style="margin-top:2rem">
+                        <!-- wp:button {"backgroundColor":"primary","style":{"color":{"text":"#FFFFFF"}}} -->
+                        <div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-text-color has-background wp-element-button" href="/" style="color:#FFFFFF">Volver al inicio</a></div>
+                        <!-- /wp:button -->
+                    </div>
+                    <!-- /wp:buttons -->
+                </div>
+                <!-- /wp:group -->
+            <!-- /wp:query-no-results -->
+        </div>
+        <!-- /wp:query -->
+    </div>
+    <!-- /wp:group -->
+    
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem","left":"2rem","right":"2rem"}},"color":{"background":"#E8F5E9"}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group has-background" style="background-color:#E8F5E9;padding-top:2rem;padding-bottom:2rem;padding-left:2rem;padding-right:2rem">
+        <!-- wp:heading {"textAlign":"center","style":{"color":{"text":"#1B5E20"},"spacing":{"margin":{"bottom":"1rem"}}}} -->
+        <h2 class="wp-block-heading has-text-align-center has-text-color" style="color:#1B5E20;margin-bottom:1rem">¿Quieres participar en nuestros eventos?</h2>
+        <!-- /wp:heading -->
+        
+        <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#666666"}}} -->
+        <p class="has-text-align-center has-text-color" style="color:#666666">Únete a nuestras jornadas de reforestación y ayuda a crear un México más verde.</p>
+        <!-- /wp:paragraph -->
+        
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
+        <div class="wp-block-buttons" style="margin-top:1.5rem">
+            <!-- wp:button {"backgroundColor":"primary","style":{"color":{"text":"#FFFFFF"}}} -->
+            <div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-text-color has-background wp-element-button" style="color:#FFFFFF">Contáctanos</a></div>
+            <!-- /wp:button -->
+            
+            <!-- wp:button {"backgroundColor":"white","textColor":"primary","style":{"border":{"width":"2px","color":"#2E7D32"}}} -->
+            <div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-white-background-color has-text-color has-background has-border-color wp-element-button" style="border-color:#2E7D32;border-width:2px">Saber más</a></div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

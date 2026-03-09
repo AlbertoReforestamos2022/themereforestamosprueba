@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/eventos-proximos",
+  "title": "Eventos Próximos",
+  "category": "reforestamos",
+  "icon": "calendar-alt",
+  "description": "Lista de próximos eventos con integración a CPT Eventos",
+  "keywords": ["eventos", "events", "calendario", "próximos", "upcoming"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "count": {
+      "type": "number",
+      "default": 3
+    },
+    "showPast": {
+      "type": "boolean",
+      "default": false
+    },
+    "layout": {
+      "type": "string",
+      "default": "cards"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

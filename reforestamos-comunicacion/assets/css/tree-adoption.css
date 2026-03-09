@@ -1,0 +1,107 @@
+/**
+ * Tree Adoption Form Styles
+ */
+.reforestamos-adoption-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reforestamos-adoption-form h3 {
+    color: #2E7D32;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.adoption-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.adoption-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.adoption-form .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.adoption-form .form-control:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.adoption-form .form-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.adoption-form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2E7D32;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.adoption-form .btn-primary:hover {
+    background-color: #1B5E20;
+}
+
+.adoption-form .btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.adoption-messages {
+    margin-top: 1rem;
+}
+
+.adoption-messages .alert {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.adoption-messages .alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.adoption-messages .alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reforestamos-adoption-form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .reforestamos-adoption-form h3 {
+        font-size: 1.5rem;
+    }
+}

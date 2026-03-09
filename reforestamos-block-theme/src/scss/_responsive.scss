@@ -1,0 +1,311 @@
+/**
+ * Responsive Design Utilities
+ * Bootstrap 5 Grid System Integration
+ * 
+ * @package Reforestamos
+ */
+
+// Responsive Grid Utilities
+.container-responsive {
+  width: 100%;
+  padding-right: $spacing-sm;
+  padding-left: $spacing-sm;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-to('sm') {
+    max-width: 540px;
+  }
+
+  @include respond-to('md') {
+    max-width: 720px;
+  }
+
+  @include respond-to('lg') {
+    max-width: 960px;
+  }
+
+  @include respond-to('xl') {
+    max-width: $content-width;
+  }
+
+  @include respond-to('xxl') {
+    max-width: $wide-width;
+  }
+}
+
+// Responsive Typography
+.responsive-text {
+  font-size: $font-size-small;
+
+  @include respond-to('md') {
+    font-size: $font-size-medium;
+  }
+
+  @include respond-to('lg') {
+    font-size: $font-size-large;
+  }
+}
+
+.responsive-heading-1 {
+  font-size: 1.75rem;
+
+  @include respond-to('md') {
+    font-size: 2.5rem;
+  }
+
+  @include respond-to('lg') {
+    font-size: $font-size-xxlarge;
+  }
+}
+
+.responsive-heading-2 {
+  font-size: 1.5rem;
+
+  @include respond-to('md') {
+    font-size: 2rem;
+  }
+
+  @include respond-to('lg') {
+    font-size: $font-size-xlarge;
+  }
+}
+
+// Responsive Spacing
+.responsive-padding {
+  padding: $spacing-sm;
+
+  @include respond-to('md') {
+    padding: $spacing-md;
+  }
+
+  @include respond-to('lg') {
+    padding: $spacing-lg;
+  }
+
+  @include respond-to('xl') {
+    padding: $spacing-xl;
+  }
+}
+
+.responsive-margin {
+  margin: $spacing-sm;
+
+  @include respond-to('md') {
+    margin: $spacing-md;
+  }
+
+  @include respond-to('lg') {
+    margin: $spacing-lg;
+  }
+
+  @include respond-to('xl') {
+    margin: $spacing-xl;
+  }
+}
+
+// Responsive Display Utilities
+.hide-mobile {
+  @media (max-width: $breakpoint-md - 1px) {
+    display: none !important;
+  }
+}
+
+.hide-tablet {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+    display: none !important;
+  }
+}
+
+.hide-desktop {
+  @media (min-width: $breakpoint-lg) {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  display: none !important;
+
+  @media (max-width: $breakpoint-md - 1px) {
+    display: block !important;
+  }
+}
+
+.show-tablet {
+  display: none !important;
+
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+    display: block !important;
+  }
+}
+
+.show-desktop {
+  display: none !important;
+
+  @media (min-width: $breakpoint-lg) {
+    display: block !important;
+  }
+}
+
+// Responsive Images
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Responsive Flexbox
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  @include respond-to('md') {
+    flex-direction: row;
+    gap: $spacing-md;
+  }
+}
+
+.flex-wrap-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+
+  @include respond-to('md') {
+    gap: $spacing-md;
+  }
+}
+
+// Responsive Grid
+.grid-responsive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-sm;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+  }
+
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-to('xl') {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+  }
+}
+
+// Responsive Cards
+.card-responsive {
+  width: 100%;
+
+  @include respond-to('md') {
+    width: calc(50% - #{$spacing-sm});
+  }
+
+  @include respond-to('lg') {
+    width: calc(33.333% - #{$spacing-md});
+  }
+}
+
+// Responsive Navigation
+.nav-responsive {
+  flex-direction: column;
+
+  @include respond-to('lg') {
+    flex-direction: row;
+  }
+}
+
+// Mobile Menu Styles
+.mobile-menu {
+  display: block;
+
+  @include respond-to('lg') {
+    display: none;
+  }
+}
+
+.desktop-menu {
+  display: none;
+
+  @include respond-to('lg') {
+    display: block;
+  }
+}
+
+// Responsive Tables
+.table-responsive-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  table {
+    min-width: 600px;
+  }
+}
+
+// Touch Target Sizes (minimum 44x44px for accessibility)
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Responsive Video Embeds
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+  height: 0;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Print Styles
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #000;
+
+    &[href]:after {
+      content: " (" attr(href) ")";
+      font-size: 0.8em;
+    }
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}

@@ -1,0 +1,322 @@
+/**
+ * Events Calendar Styles
+ *
+ * Styles for the monthly events calendar view.
+ */
+
+.reforestamos-calendar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--wp--preset--color--light, #f1f8e9);
+    border-radius: 8px;
+
+    .calendar-title {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--wp--preset--color--primary, #2e7d32);
+    }
+
+    .calendar-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--wp--preset--color--white, #fff);
+      border: 1px solid var(--wp--preset--color--primary, #2e7d32);
+      border-radius: 4px;
+      color: var(--wp--preset--color--primary, #2e7d32);
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: var(--wp--preset--color--primary, #2e7d32);
+        color: var(--wp--preset--color--white, #fff);
+      }
+
+      .dashicons {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--wp--preset--color--white, #fff);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+      background: var(--wp--preset--color--primary, #2e7d32);
+      color: var(--wp--preset--color--white, #fff);
+
+      th {
+        padding: 1rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .calendar-day {
+        padding: 0.5rem;
+        vertical-align: top;
+        min-height: 100px;
+        height: 120px;
+        border-right: 1px solid #e0e0e0;
+        position: relative;
+        transition: background-color 0.2s ease;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &.empty {
+          background: #fafafa;
+        }
+
+        &.today {
+          background: #fff3e0;
+
+          .day-number {
+            background: var(--wp--preset--color--accent, #ffa726);
+            color: var(--wp--preset--color--white, #fff);
+          }
+        }
+
+        &.has-events {
+          background: #e8f5e9;
+          cursor: pointer;
+
+          &:hover {
+            background: #c8e6c9;
+          }
+        }
+
+        .day-number {
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+          text-align: center;
+          border-radius: 50%;
+          font-weight: 600;
+          font-size: 0.875rem;
+          margin-bottom: 0.25rem;
+        }
+
+        .day-events {
+          margin-top: 0.5rem;
+
+          .event-marker {
+            display: block;
+            padding: 0.25rem;
+            margin-bottom: 0.25rem;
+            text-decoration: none;
+            color: var(--wp--preset--color--dark, #1b5e20);
+            font-size: 0.75rem;
+            line-height: 1.2;
+            border-radius: 3px;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+              background: rgba(46, 125, 50, 0.1);
+
+              .event-title {
+                text-decoration: underline;
+              }
+            }
+
+            .event-dot {
+              display: inline-block;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: var(--wp--preset--color--primary, #2e7d32);
+              margin-right: 0.25rem;
+            }
+
+            .event-title {
+              display: inline;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .calendar-events-list {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--wp--preset--color--white, #fff);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: var(--wp--preset--color--primary, #2e7d32);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .events-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .event-item {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        a {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+          text-decoration: none;
+          color: inherit;
+          border-radius: 4px;
+          transition: background-color 0.2s ease;
+
+          &:hover {
+            background: var(--wp--preset--color--light, #f1f8e9);
+          }
+
+          .event-date {
+            flex-shrink: 0;
+            padding: 0.5rem 1rem;
+            background: var(--wp--preset--color--primary, #2e7d32);
+            color: var(--wp--preset--color--white, #fff);
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.875rem;
+          }
+
+          .event-title {
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--wp--preset--color--dark, #1b5e20);
+          }
+
+          .event-location {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: #666;
+            font-size: 0.875rem;
+
+            .dashicons {
+              font-size: 16px;
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .reforestamos-calendar {
+    .calendar-header {
+      flex-direction: column;
+      gap: 1rem;
+
+      .calendar-title {
+        font-size: 1.5rem;
+      }
+
+      .calendar-nav {
+        font-size: 0.875rem;
+      }
+    }
+
+    .calendar-table {
+      thead th {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+      }
+
+      tbody .calendar-day {
+        min-height: 80px;
+        height: 80px;
+        padding: 0.25rem;
+
+        .day-number {
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 0.75rem;
+        }
+
+        .day-events .event-marker {
+          font-size: 0.625rem;
+
+          .event-title {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .calendar-events-list {
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      .events-list .event-item a {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        .event-date {
+          font-size: 0.75rem;
+        }
+
+        .event-title {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

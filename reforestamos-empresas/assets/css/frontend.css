@@ -1,0 +1,49 @@
+/**
+ * Frontend Styles for Reforestamos Empresas
+ *
+ * General frontend styles for the plugin
+ *
+ * @package Reforestamos_Empresas
+ */
+
+/* General Styles */
+.reforestamos-empresas {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Utility Classes */
+.empresas-loading {
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.empresas-hidden {
+	display: none !important;
+}
+
+/* Responsive Images */
+.empresas-image {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Accessibility */
+.empresas-sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* Print Styles */
+@media print {
+	.empresas-no-print {
+		display: none !important;
+	}
+}

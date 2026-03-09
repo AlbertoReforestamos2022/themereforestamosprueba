@@ -1,0 +1,150 @@
+# Copyright (C) 2024 Reforestamos México
+# This file is distributed under the same license as the Reforestamos México package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Reforestamos México 1.0.0\n"
+"Report-Msgid-Bugs-To: https://reforestamos.org\n"
+"POT-Creation-Date: 2024-01-01 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: functions.php
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php
+msgid "Reforestamos"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "Cambiar a Español"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "Switch to English"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "Ver en Español"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "View in English"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "Invalid language code"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "Language changed successfully"
+msgstr ""
+
+#: inc/i18n-functions.php
+msgid "Failed to change language"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Header Settings"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Select Menu"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Choose which WordPress menu to display"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Logo"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Change Logo"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Remove"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Select Logo"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Appearance"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Background Color"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Text Color"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Sticky Header"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Header stays fixed at top when scrolling"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Transparent on Top"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Header becomes transparent when at page top, solid when scrolling"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Features"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Show Language Switcher"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Display language switcher (ES/EN)"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Select a menu..."
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "White"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Light"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Primary"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Dark"
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Loading menu..."
+msgstr ""
+
+#: blocks/header-navbar/edit.js
+msgid "Select a menu in settings →"
+msgstr ""
+

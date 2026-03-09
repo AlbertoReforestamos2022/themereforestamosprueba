@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/carousel",
+  "title": "Carousel",
+  "category": "reforestamos",
+  "icon": "images-alt2",
+  "description": "Carrusel de imágenes con Bootstrap 5",
+  "keywords": ["carousel", "slider", "images", "gallery"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "images": {
+      "type": "array",
+      "default": []
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    },
+    "interval": {
+      "type": "number",
+      "default": 5000
+    },
+    "showControls": {
+      "type": "boolean",
+      "default": true
+    },
+    "showIndicators": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

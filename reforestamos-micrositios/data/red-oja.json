@@ -1,0 +1,186 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-01-15T10:00:00Z",
+  "organizaciones": [
+    {
+      "id": 1,
+      "nombre": "Jóvenes por el Bosque CDMX",
+      "ciudad": "Ciudad de México",
+      "estado": "Ciudad de México",
+      "municipio": "Coyoacán",
+      "tipo": "Organización Juvenil",
+      "actividades": [
+        "Reforestación",
+        "Educación Ambiental",
+        "Limpieza de Áreas Naturales"
+      ],
+      "ubicacion": {
+        "lat": 19.3467,
+        "lng": -99.1618
+      },
+      "contacto": {
+        "email": "contacto@jovenesporlabosque.org",
+        "telefono": "+52 55 1234 5678",
+        "website": "https://jovenesporlabosque.org"
+      },
+      "descripcion": "Organización juvenil dedicada a la conservación y restauración de áreas verdes en la Ciudad de México.",
+      "logo": "",
+      "miembros": 45,
+      "redes_sociales": {
+        "facebook": "https://facebook.com/jovenesporlabosque",
+        "twitter": "https://twitter.com/jovenesxbosque",
+        "instagram": "https://instagram.com/jovenesporlabosque"
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Guardianes del Agua Jalisco",
+      "ciudad": "Guadalajara",
+      "estado": "Jalisco",
+      "municipio": "Guadalajara",
+      "tipo": "Colectivo Ambiental",
+      "actividades": [
+        "Conservación de Cuencas",
+        "Monitoreo de Calidad del Agua",
+        "Talleres Comunitarios"
+      ],
+      "ubicacion": {
+        "lat": 20.6597,
+        "lng": -103.3496
+      },
+      "contacto": {
+        "email": "info@guardianesdelagua.mx",
+        "telefono": "+52 33 9876 5432",
+        "website": "https://guardianesdelagua.mx"
+      },
+      "descripcion": "Colectivo de jóvenes enfocado en la protección y conservación de los recursos hídricos en Jalisco.",
+      "logo": "",
+      "miembros": 32,
+      "redes_sociales": {
+        "facebook": "https://facebook.com/guardianesagua",
+        "twitter": "",
+        "instagram": "https://instagram.com/guardianesagua"
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Eco Juventud Monterrey",
+      "ciudad": "Monterrey",
+      "estado": "Nuevo León",
+      "municipio": "Monterrey",
+      "tipo": "Organización Juvenil",
+      "actividades": [
+        "Reciclaje",
+        "Educación Ambiental",
+        "Campañas de Concientización"
+      ],
+      "ubicacion": {
+        "lat": 25.6866,
+        "lng": -100.3161
+      },
+      "contacto": {
+        "email": "contacto@ecojuventudmty.org",
+        "telefono": "+52 81 2345 6789",
+        "website": "https://ecojuventudmty.org"
+      },
+      "descripcion": "Organización de jóvenes comprometidos con la sustentabilidad y el cuidado del medio ambiente en Nuevo León.",
+      "logo": "",
+      "miembros": 58,
+      "redes_sociales": {
+        "facebook": "https://facebook.com/ecojuventudmty",
+        "twitter": "https://twitter.com/ecojuventudmty",
+        "instagram": "https://instagram.com/ecojuventudmty"
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Sembradores del Futuro Oaxaca",
+      "ciudad": "Oaxaca de Juárez",
+      "estado": "Oaxaca",
+      "municipio": "Oaxaca de Juárez",
+      "tipo": "Colectivo Ambiental",
+      "actividades": [
+        "Reforestación",
+        "Agricultura Sustentable",
+        "Conservación de Biodiversidad"
+      ],
+      "ubicacion": {
+        "lat": 17.0732,
+        "lng": -96.7266
+      },
+      "contacto": {
+        "email": "sembradores@futuro.org",
+        "telefono": "+52 951 234 5678",
+        "website": ""
+      },
+      "descripcion": "Colectivo juvenil que promueve la reforestación y agricultura sustentable en comunidades de Oaxaca.",
+      "logo": "",
+      "miembros": 28,
+      "redes_sociales": {
+        "facebook": "https://facebook.com/sembradoresfuturo",
+        "twitter": "",
+        "instagram": "https://instagram.com/sembradoresfuturo"
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Verdes por Naturaleza Yucatán",
+      "ciudad": "Mérida",
+      "estado": "Yucatán",
+      "municipio": "Mérida",
+      "tipo": "Organización Juvenil",
+      "actividades": [
+        "Conservación de Cenotes",
+        "Educación Ambiental",
+        "Turismo Sustentable"
+      ],
+      "ubicacion": {
+        "lat": 20.9674,
+        "lng": -89.5926
+      },
+      "contacto": {
+        "email": "contacto@verdesnaturaleza.org",
+        "telefono": "+52 999 876 5432",
+        "website": "https://verdesnaturaleza.org"
+      },
+      "descripcion": "Organización juvenil dedicada a la conservación de cenotes y ecosistemas naturales de Yucatán.",
+      "logo": "",
+      "miembros": 41,
+      "redes_sociales": {
+        "facebook": "https://facebook.com/verdesnaturaleza",
+        "twitter": "https://twitter.com/verdesnaturaleza",
+        "instagram": "https://instagram.com/verdesnaturaleza"
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Acción Climática Puebla",
+      "ciudad": "Puebla",
+      "estado": "Puebla",
+      "municipio": "Puebla",
+      "tipo": "Colectivo Ambiental",
+      "actividades": [
+        "Activismo Climático",
+        "Educación Ambiental",
+        "Movilidad Sustentable"
+      ],
+      "ubicacion": {
+        "lat": 19.0414,
+        "lng": -98.2063
+      },
+      "contacto": {
+        "email": "info@accionclimaticapue.org",
+        "telefono": "+52 222 345 6789",
+        "website": "https://accionclimaticapue.org"
+      },
+      "descripcion": "Colectivo de jóvenes activistas enfocados en la acción climática y movilidad sustentable en Puebla.",
+      "logo": "",
+      "miembros": 37,
+      "redes_sociales": {
+        "facebook": "https://facebook.com/accionclimaticapue",
+        "twitter": "https://twitter.com/accionclimaticapue",
+        "instagram": "https://instagram.com/accionclimaticapue"
+      }
+    }
+  ]
+}

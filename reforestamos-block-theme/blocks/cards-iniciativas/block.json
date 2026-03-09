@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/cards-iniciativas",
+  "title": "Cards Iniciativas",
+  "category": "reforestamos",
+  "icon": "portfolio",
+  "description": "Tarjetas de iniciativas con layout especial para destacar proyectos y programas",
+  "keywords": ["cards", "tarjetas", "iniciativas", "proyectos", "programas"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "initiatives": {
+      "type": "array",
+      "default": []
+    },
+    "layout": {
+      "type": "string",
+      "default": "grid"
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}

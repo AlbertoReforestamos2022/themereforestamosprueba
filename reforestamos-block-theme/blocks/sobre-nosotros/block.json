@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "reforestamos/sobre-nosotros",
+  "title": "Sobre Nosotros",
+  "category": "reforestamos",
+  "icon": "groups",
+  "description": "Sección compleja con información del equipo y estadísticas de la organización",
+  "keywords": ["sobre", "nosotros", "equipo", "team", "estadísticas", "stats", "about"],
+  "textdomain": "reforestamos",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "team": {
+      "type": "array",
+      "default": []
+    },
+    "stats": {
+      "type": "array",
+      "default": []
+    },
+    "showStats": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTeam": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true,
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss"
+}
