@@ -4,6 +4,6 @@ import Save from './save';
 import './style.scss';
 
 registerBlockType('reforestamos/carousel', {
-    edit: Edit,
-    save: Save,
+	edit: Edit,
+	save: Save,
 });

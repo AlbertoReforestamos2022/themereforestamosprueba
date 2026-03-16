@@ -1,173 +1,173 @@
-# Reforestamos Micrositios Plugin
+# Reforestamos Micrositios
 
-Plugin de WordPress para gestionar micrositios interactivos con mapas Leaflet.
+Interactive map microsites plugin for Reforestamos México. Provides the "Árboles y Ciudades" and "Red OJA" microsites with Leaflet-powered maps, filtering, and admin data management.
 
-## Descripción
+## Requirements
 
-Este plugin proporciona dos micrositios interactivos:
+- WordPress 6.0+
+- PHP 7.4+
 
-1. **Árboles y Ciudades**: Mapa interactivo que muestra ubicaciones de árboles plantados en diferentes ciudades de México.
-2. **Red OJA**: Mapa y directorio de Organizaciones Juveniles Ambientales en México.
+## Installation
 
-## Características
+1. Upload `reforestamos-micrositios/` to `wp-content/plugins/`
+2. Activate in WordPress Admin → Plugins
+3. Create pages and insert shortcodes (see below)
 
-- Mapas interactivos con Leaflet
-- Shortcodes para insertar micrositios en páginas
-- Gestión de datos mediante archivos JSON
-- Filtros y búsqueda en tiempo real
-- Estadísticas de árboles y organizaciones
-- Responsive y accesible
+## Features
 
-## Requisitos
+- Interactive maps powered by Leaflet.js (loaded from CDN)
+- Two microsites: Árboles y Ciudades, Red OJA
+- JSON-based data management with admin upload interface
+- Filtering by city, species, state, type, and activity
+- Marker clustering for large datasets
+- Directory view alongside map view (Red OJA)
 
-- WordPress 6.0 o superior
-- PHP 7.4 o superior
+## Shortcodes
 
-## Instalación
+### `[arboles-ciudades]`
 
-1. Sube el directorio `reforestamos-micrositios` a `/wp-content/plugins/`
-2. Activa el plugin desde el menú 'Plugins' en WordPress
-3. Ve a 'Micrositios' en el menú de administración para gestionar los datos
+Renders the Árboles y Ciudades interactive map.
 
-## Uso
-
-### Shortcodes
-
-#### Árboles y Ciudades
-
-```
+```html
+<!-- In any page or post -->
 [arboles-ciudades]
 ```
 
-Atributos opcionales:
-- `height`: Altura del mapa (default: 600px)
-- `zoom`: Nivel de zoom inicial (default: 6)
-- `center_lat`: Latitud del centro del mapa (default: 23.6345)
-- `center_lng`: Longitud del centro del mapa (default: -102.5528)
+Displays:
+- Interactive map with tree location markers
+- Filter controls (city, species, date)
+- Popup details on marker click
+- Statistics counters (total trees, species, cities)
 
-Ejemplo:
-```
-[arboles-ciudades height="500px" zoom="7"]
-```
+### `[red-oja]`
 
-#### Red OJA
+Renders the Red OJA (Red de Organizaciones Juveniles Ambientales) map.
 
-```
+```html
 [red-oja]
 ```
 
-Atributos opcionales:
-- `height`: Altura del mapa (default: 600px)
-- `zoom`: Nivel de zoom inicial (default: 5)
-- `center_lat`: Latitud del centro del mapa (default: 23.6345)
-- `center_lng`: Longitud del centro del mapa (default: -102.5528)
-- `view`: Vista a mostrar - 'map', 'directory', o 'both' (default: map)
+Displays:
+- Interactive map with organization markers
+- Filter controls (state, type, activity)
+- Organization directory list (synced with map)
+- Popup details on marker click
 
-Ejemplo:
-```
-[red-oja view="both" height="700px"]
-```
+## Configuration
 
-## Estructura de Datos
+### Admin Interface
 
-### Árboles y Ciudades (arboles-ciudades.json)
+Navigate to **Micrositios** in the WordPress admin menu to:
 
-```json
-{
-  "version": "1.0",
-  "last_updated": "2024-01-15",
-  "arboles": [
-    {
-      "id": 1,
-      "especie": "Pino",
-      "nombre_cientifico": "Pinus montezumae",
-      "ciudad": "Ciudad de México",
-      "estado": "CDMX",
-      "ubicacion": {
-        "lat": 19.4326,
-        "lng": -99.1332
-      },
-      "fecha_plantacion": "2023-06-15",
-      "cantidad": 500,
-      "descripcion": "Reforestación en el Ajusco"
-    }
-  ]
-}
-```
+- Upload/replace JSON data files
+- Preview data before saving
+- Validate JSON structure
 
-### Red OJA (red-oja.json)
+### Data Format
+
+#### Árboles y Ciudades (`data/arboles-ciudades.json`)
 
 ```json
-{
-  "version": "1.0",
-  "last_updated": "2024-01-15",
-  "organizaciones": [
-    {
-      "id": 1,
-      "nombre": "Organización Ejemplo",
-      "estado": "Jalisco",
-      "ciudad": "Guadalajara",
-      "tipo": "Asociación Civil",
-      "ubicacion": {
-        "lat": 20.6597,
-        "lng": -103.3496
-      },
-      "descripcion": "Descripción de la organización",
-      "contacto": {
-        "email": "contacto@ejemplo.org",
-        "telefono": "33-1234-5678",
-        "website": "https://ejemplo.org"
-      },
-      "miembros": 50
-    }
-  ]
-}
+[
+  {
+    "nombre": "Ahuehuete",
+    "especie": "Taxodium mucronatum",
+    "ciudad": "Ciudad de México",
+    "lat": 19.4326,
+    "lng": -99.1332,
+    "fecha": "2023-06-15",
+    "cantidad": 50,
+    "descripcion": "Plantación en Chapultepec"
+  }
+]
 ```
 
-## Desarrollo
+#### Red OJA (`data/red-oja.json`)
 
-### Estructura de Archivos
+```json
+[
+  {
+    "nombre": "Organización Ejemplo",
+    "estado": "Jalisco",
+    "tipo": "ONG",
+    "actividad": "Reforestación",
+    "lat": 20.6597,
+    "lng": -103.3496,
+    "contacto": "contacto@ejemplo.org",
+    "descripcion": "Descripción de la organización"
+  }
+]
+```
+
+## Directory Structure
 
 ```
 reforestamos-micrositios/
-├── includes/                          # Clases PHP
-│   ├── class-reforestamos-micrositios.php
-│   ├── class-arboles-ciudades.php
-│   ├── class-red-oja.php
-│   ├── class-map-renderer.php
-│   └── class-json-manager.php
-├── assets/                            # Assets frontend
-│   ├── css/
-│   │   └── maps.css
+├── reforestamos-micrositios.php    # Main plugin file
+├── includes/
+│   ├── class-reforestamos-micrositios.php  # Main plugin class
+│   ├── class-arboles-ciudades.php  # Árboles y Ciudades shortcode
+│   ├── class-red-oja.php           # Red OJA shortcode
+│   ├── class-map-renderer.php      # Shared map rendering
+│   └── class-json-manager.php      # JSON data management
+├── assets/
 │   ├── js/
-│   │   └── map-handler.js
-│   └── images/
-│       └── markers/
-├── data/                              # Archivos JSON
-│   ├── arboles-ciudades.json
-│   └── red-oja.json
-├── admin/                             # Admin interface
-│   ├── views/
-│   └── templates/
-├── languages/                         # Traducciones
-├── reforestamos-micrositios.php      # Archivo principal
-└── README.md
+│   │   └── map-handler.js          # Map initialization and interaction
+│   └── css/
+│       └── maps.css                # Map styles
+├── admin/
+│   ├── js/
+│   │   └── admin-uploader.js       # JSON upload interface
+│   ├── css/                        # Admin styles
+│   ├── views/                      # Admin page templates
+│   └── templates/                  # Admin templates
+├── data/
+│   ├── arboles-ciudades.json       # Tree data
+│   └── red-oja.json                # Organization data
+├── templates/                      # Frontend templates
+├── tests/                          # Test files
+└── uninstall.php                   # Clean uninstall
 ```
 
-## Changelog
+## API & Hooks
 
-### 1.0.0
-- Versión inicial
-- Micrositio Árboles y Ciudades
-- Micrositio Red OJA
-- Integración con Leaflet
-- Gestión de datos JSON
+### Actions
 
-## Licencia
+| Hook | Description |
+|------|-------------|
+| `reforestamos_micrositios_init` | Fires after plugin initialization |
+| `reforestamos_micrositios_data_updated` | Fires after JSON data is updated |
+
+### Filters
+
+| Filter | Description |
+|--------|-------------|
+| `reforestamos_micrositios_map_options` | Filter Leaflet map initialization options |
+| `reforestamos_micrositios_marker_popup` | Filter marker popup HTML content |
+| `reforestamos_micrositios_allowed_file_types` | Filter allowed upload file types |
+
+### JavaScript Events
+
+The map handler dispatches custom events on the map container:
+
+```javascript
+// Listen for map ready
+document.addEventListener('reforestamos-map-ready', (e) => {
+  console.log('Map initialized:', e.detail.mapId);
+});
+
+// Listen for filter changes
+document.addEventListener('reforestamos-filter-change', (e) => {
+  console.log('Filters:', e.detail.filters);
+});
+```
+
+## Uninstall
+
+Deactivating the plugin hides the shortcode output. Deleting the plugin via `uninstall.php` removes:
+- Plugin options from `wp_options`
+- Uploaded JSON data files
+
+## License
 
 GPL v2 or later
-
-## Autor
-
-Reforestamos México
-https://reforestamos.org

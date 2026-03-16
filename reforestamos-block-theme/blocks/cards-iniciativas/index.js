@@ -4,6 +4,6 @@ import Save from './save';
 import './style.scss';
 
 registerBlockType('reforestamos/cards-iniciativas', {
-    edit: Edit,
-    save: Save,
+	edit: Edit,
+	save: Save,
 });

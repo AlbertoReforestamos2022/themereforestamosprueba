@@ -1,0 +1,10 @@
+node_modules/
+build/
+dist/
+vendor/
+CMB2/
+EjemploTheme/
+*.min.js
+*.min.css
+composer.lock
+package-lock.json

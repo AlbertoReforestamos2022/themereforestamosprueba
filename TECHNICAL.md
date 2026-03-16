@@ -572,4 +572,4 @@ add_filter('wp_nav_menu_items', 'rm_add_menu_items');
 
 ---
 
-**Última actualización**: Febrero 2025
+**Última actualización**: Marzo 2025

@@ -1,144 +1,183 @@
-# Reforestamos Empresas Plugin
+# Reforestamos Empresas
 
-Plugin de WordPress para gestión avanzada de empresas colaboradoras con analytics y galerías.
+Company management plugin for Reforestamos México. Extends the Empresas CPT with company profiles, logo grids, click analytics, and photo galleries.
 
-## Descripción
+## Requirements
 
-Este plugin extiende la funcionalidad del Custom Post Type "Empresas" definido en el plugin Reforestamos Core, proporcionando características adicionales como:
+- WordPress 6.0+
+- PHP 7.4+
+- **Reforestamos Core plugin** (required dependency — must be active)
 
-- Sistema de analytics para rastrear clics en logos y enlaces de empresas
-- Gestión de galerías de fotos para cada empresa
-- Shortcodes para mostrar grids de empresas
-- Dashboard de analytics en el admin
-- Templates personalizados para páginas de empresas
+## Installation
 
-## Requisitos
+1. Ensure the **Reforestamos Core** plugin is installed and active
+2. Upload `reforestamos-empresas/` to `wp-content/plugins/`
+3. Activate in WordPress Admin → Plugins
 
-- WordPress 6.0 o superior
-- PHP 7.4 o superior
-- **Plugin Reforestamos Core** (requerido)
+If Core is not active, the plugin will display an admin warning and deactivate gracefully.
 
-## Instalación
+## Features
 
-1. Asegúrate de que el plugin **Reforestamos Core** esté instalado y activado
-2. Sube la carpeta `reforestamos-empresas` al directorio `/wp-content/plugins/`
-3. Activa el plugin desde el menú 'Plugins' en WordPress
+### Company Management
+- Extended company profiles with logo, description, gallery, contact info
+- Frontend company profile template
+- Company categorization by industry/partnership type
 
-## Dependencias
+### Company Grid Display
+- `[companies-grid]` shortcode for logo grids
+- Filterable by category
+- Responsive layout with lazy-loaded images
 
-Este plugin **requiere** que el plugin Reforestamos Core esté activo. Si intentas activar este plugin sin tener el Core activo, recibirás un mensaje de error y el plugin no se activará.
+### Click Analytics
+- Automatic click tracking on company logos and links
+- Admin dashboard with metrics (total clicks, monthly, top companies)
+- Unique vs. repeat click tracking (cookie-based)
+- Date range filtering
+- CSV export
 
-## Estructura del Plugin
+### Photo Galleries
+- Per-company gallery management
+- Responsive grid with lightbox (GLightbox)
+- Automatic thumbnail generation
+- Image captions and descriptions
+- `[company-gallery]` shortcode
+- All-galleries page template
+
+## Shortcodes
+
+### `[companies-grid]`
+
+Displays a responsive grid of company logos.
+
+```html
+<!-- All companies -->
+[companies-grid]
+
+<!-- Filter by category -->
+[companies-grid category="corporativo"]
+
+<!-- Custom columns -->
+[companies-grid columns="6"]
+```
+
+**Parameters:**
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `category` | `""` | Filter by company category slug |
+| `columns` | `4` | Number of grid columns |
+| `orderby` | `title` | Sort order |
+
+### `[company-gallery]`
+
+Displays a specific company's photo gallery.
+
+```html
+[company-gallery id="123"]
+```
+
+**Parameters:**
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `id` | (required) | Company post ID |
+| `columns` | `3` | Gallery grid columns |
+
+## Configuration
+
+### Analytics Dashboard
+
+Navigate to **Empresas → Analytics** to view:
+- Total clicks across all companies
+- Monthly click trends (Chart.js graphs)
+- Top companies by clicks
+- Date range filtering
+- CSV export button
+
+### Gallery Management
+
+When editing a company post, use the **Gallery** meta box to:
+- Upload multiple images
+- Reorder images via drag-and-drop
+- Add captions and descriptions
+- Remove individual images
+
+## Directory Structure
 
 ```
 reforestamos-empresas/
-├── includes/                          # Clases principales del plugin
-│   └── class-reforestamos-empresas.php
-├── admin/                             # Archivos del área de administración
-│   ├── css/
-│   │   └── admin.css
-│   └── js/
-│       └── admin.js
-├── assets/                            # Assets del frontend
-│   ├── css/
-│   │   └── frontend.css
-│   └── js/
-│       └── frontend.js
-├── templates/                         # Templates personalizados
-├── languages/                         # Archivos de traducción
-├── reforestamos-empresas.php         # Archivo principal del plugin
-└── README.md
+├── reforestamos-empresas.php          # Main plugin file
+├── includes/
+│   ├── class-reforestamos-empresas.php # Main plugin class
+│   ├── class-company-manager.php       # Company management
+│   ├── class-shortcodes.php            # Shortcode handlers
+│   ├── class-analytics.php             # Click tracking & analytics
+│   ├── class-gallery-manager.php       # Gallery management
+│   └── class-image-optimizer.php       # Image optimization
+├── admin/
+│   ├── views/
+│   │   └── analytics-dashboard.php     # Analytics admin page
+│   ├── js/
+│   │   ├── admin.js                    # Admin scripts
+│   │   └── analytics.js               # Analytics dashboard JS
+│   └── css/                            # Admin styles
+├── assets/
+│   ├── js/
+│   │   └── companies-grid.js           # Frontend grid JS
+│   └── css/
+│       ├── companies-grid.css          # Grid styles
+│       └── company-profile.css         # Profile styles
+├── templates/
+│   ├── single-empresa-template.php     # Company profile template
+│   └── page-galleries.php              # All galleries page
+├── languages/
+│   └── reforestamos-empresas.pot       # Translation template
+├── tests/                              # Test files
+└── uninstall.php                       # Clean uninstall
 ```
 
-## Características Principales
+## API & Hooks
 
-### 1. Sistema de Analytics
-- Rastreo de clics en logos de empresas
-- Rastreo de clics en enlaces de empresas
-- Dashboard de analytics en el admin
-- Exportación de datos a CSV
-- Filtros por rango de fechas
+### Actions
 
-### 2. Gestión de Galerías
-- Añadir múltiples imágenes a cada empresa
-- Ordenar imágenes mediante drag & drop
-- Lightbox para visualización de imágenes
-- Shortcode para mostrar galerías
+| Hook | Description |
+|------|-------------|
+| `reforestamos_empresas_init` | Fires after plugin initialization |
+| `reforestamos_company_click` | Fires on company click. Args: `$company_id`, `$click_data` |
+| `reforestamos_gallery_updated` | Fires after gallery update. Args: `$company_id` |
 
-### 3. Shortcodes Disponibles
+### Filters
 
-#### [companies-grid]
-Muestra un grid de logos de empresas.
+| Filter | Description |
+|--------|-------------|
+| `reforestamos_companies_grid_args` | Filter WP_Query args for companies grid |
+| `reforestamos_company_profile_fields` | Filter displayed profile fields |
+| `reforestamos_gallery_image_sizes` | Filter generated image sizes |
+| `reforestamos_analytics_csv_columns` | Filter CSV export columns |
+| `reforestamos_company_logo_size` | Filter logo display size |
 
-```php
-[companies-grid columns="3" category="tecnologia"]
-```
+### AJAX Endpoints
 
-Parámetros:
-- `columns`: Número de columnas (default: 3)
-- `category`: Filtrar por categoría de empresa
-- `limit`: Número máximo de empresas a mostrar
+| Action | Method | Description |
+|--------|--------|-------------|
+| `reforestamos_track_click` | POST | Record a company click |
+| `reforestamos_export_analytics` | GET | Export analytics CSV (admin only) |
 
-#### [company-gallery]
-Muestra la galería de fotos de una empresa.
+## Database Tables
 
-```php
-[company-gallery id="123" columns="4"]
-```
+| Table | Purpose |
+|-------|---------|
+| `{prefix}reforestamos_clicks` | Click tracking data |
 
-Parámetros:
-- `id`: ID de la empresa (requerido)
-- `columns`: Número de columnas (default: 3)
+## Dependencies
 
-### 4. Templates Personalizados
-El plugin proporciona templates personalizados para:
-- Página individual de empresa (`single-empresa.php`)
-- Archivo de empresas (`archive-empresas.php`)
+This plugin **requires** the Reforestamos Core plugin because it extends the `empresas` Custom Post Type registered by Core.
 
-## Desarrollo
+## Uninstall
 
-### Hooks Disponibles
+Deleting the plugin via `uninstall.php` removes:
+- Click tracking database table
+- Plugin options from `wp_options`
+- Generated image thumbnails (optional)
 
-#### Acciones
-- `reforestamos_empresas_before_company_content` - Antes del contenido de empresa
-- `reforestamos_empresas_after_company_content` - Después del contenido de empresa
-- `reforestamos_empresas_analytics_tracked` - Después de rastrear un clic
-
-#### Filtros
-- `reforestamos_empresas_grid_columns` - Modificar número de columnas del grid
-- `reforestamos_empresas_analytics_data` - Modificar datos de analytics antes de mostrar
-
-### Estructura de Base de Datos
-
-#### Tabla: wp_reforestamos_empresas_analytics
-
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | bigint(20) | ID único del registro |
-| company_id | bigint(20) | ID de la empresa (post ID) |
-| click_type | varchar(50) | Tipo de clic (logo, card, link) |
-| user_ip | varchar(45) | IP del usuario |
-| user_agent | text | User agent del navegador |
-| referrer | text | URL de referencia |
-| clicked_at | datetime | Fecha y hora del clic |
-
-## Changelog
-
-### 1.0.0
-- Versión inicial
-- Estructura base del plugin
-- Sistema de verificación de dependencias
-- Preparación para funcionalidades futuras
-
-## Autor
-
-**Reforestamos México**
-- Website: https://reforestamos.org
-
-## Licencia
+## License
 
 GPL v2 or later
-
-## Soporte
-
-Para soporte y preguntas, visita: https://reforestamos.org/contacto

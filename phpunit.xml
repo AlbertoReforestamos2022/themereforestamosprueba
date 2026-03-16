@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<phpunit
+    bootstrap="tests/bootstrap.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+>
+    <testsuites>
+        <testsuite name="Theme Tests">
+            <directory>reforestamos-block-theme/tests/php</directory>
+        </testsuite>
+        <testsuite name="Core Plugin Tests">
+            <directory>reforestamos-core/tests/php</directory>
+        </testsuite>
+        <testsuite name="Micrositios Plugin Tests">
+            <directory>reforestamos-micrositios/tests/php</directory>
+        </testsuite>
+        <testsuite name="Comunicacion Plugin Tests">
+            <directory>reforestamos-comunicacion/tests/php</directory>
+        </testsuite>
+        <testsuite name="Empresas Plugin Tests">
+            <directory>reforestamos-empresas/tests/php</directory>
+        </testsuite>
+        <testsuite name="Migration System Tests">
+            <directory>migration-system/tests/php</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">reforestamos-block-theme/inc</directory>
+            <directory suffix=".php">reforestamos-core/includes</directory>
+            <directory suffix=".php">reforestamos-micrositios/includes</directory>
+            <directory suffix=".php">reforestamos-comunicacion/includes</directory>
+            <directory suffix=".php">reforestamos-empresas/includes</directory>
+            <directory suffix=".php">migration-system/includes</directory>
+            <exclude>
+                <directory>vendor</directory>
+                <directory>node_modules</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

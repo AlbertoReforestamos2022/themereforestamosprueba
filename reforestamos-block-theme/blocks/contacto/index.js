@@ -1,7 +1,7 @@
 /**
  * Contact Block
- * 
- * @package Reforestamos
+ *
+ * @package
  */
 
 import { registerBlockType } from '@wordpress/blocks';
@@ -11,7 +11,7 @@ import save from './save';
 import metadata from './block.json';
 
 registerBlockType(metadata.name, {
-    ...metadata,
-    edit,
-    save,
+	...metadata,
+	edit,
+	save,
 });

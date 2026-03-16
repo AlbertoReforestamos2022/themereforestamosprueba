@@ -10,10 +10,17 @@
     "format": "wp-scripts format",
     "lint:css": "wp-scripts lint-style",
     "lint:js": "wp-scripts lint-js",
-    "packages-update": "wp-scripts packages-update"
+    "packages-update": "wp-scripts packages-update",
+    "test": "wp-scripts test-unit-js --config jest.config.js",
+    "test:watch": "wp-scripts test-unit-js --config jest.config.js --watch",
+    "test:coverage": "wp-scripts test-unit-js --config jest.config.js --coverage"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^27.0.0"
+    "@testing-library/jest-dom": "^6.1.0",
+    "@testing-library/react": "^14.0.0",
+    "@wordpress/jest-preset-default": "^11.0.0",
+    "@wordpress/scripts": "^27.0.0",
+    "identity-obj-proxy": "^3.0.0"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",

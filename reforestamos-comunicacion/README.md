@@ -1,162 +1,197 @@
-# Reforestamos Comunicación Plugin
+# Reforestamos Comunicación
 
-Plugin de comunicación para Reforestamos México que gestiona newsletter, formularios de contacto, chatbot y traducción automática con DeepL.
+Communication plugin for Reforestamos México. Provides newsletter management, contact forms, chatbot, and DeepL translation integration.
 
-## Descripción
+## Requirements
 
-Este plugin proporciona funcionalidades de comunicación para el sitio web de Reforestamos México:
+- WordPress 6.0+
+- PHP 7.4+
+- SMTP server (for email sending)
+- DeepL API key (optional, for translation features)
 
-- **Newsletter**: Sistema de gestión de boletines y suscriptores
-- **Formularios de Contacto**: Formularios personalizables con protección anti-spam
-- **ChatBot**: Widget de chat interactivo para respuestas automáticas
-- **Traducción DeepL**: Integración con DeepL API para traducción automática de contenido
+## Installation
 
-## Requisitos
+1. Upload `reforestamos-comunicacion/` to `wp-content/plugins/`
+2. Activate in WordPress Admin → Plugins
+3. Configure SMTP settings under **Comunicación → Settings**
+4. (Optional) Add DeepL API key for translation features
 
-- WordPress 6.0 o superior
-- PHP 7.4 o superior
-- Servidor SMTP configurado (opcional, para envío de emails)
+## Features
 
-## Instalación
+### Newsletter System
+- Campaign creation and management
+- Subscriber management with double opt-in
+- Mass email sending with rate limiting
+- Delivery status logging and retry
+- One-click unsubscribe links
 
-1. Sube la carpeta `reforestamos-comunicacion` al directorio `/wp-content/plugins/`
-2. Activa el plugin desde el menú 'Plugins' en WordPress
-3. Configura los ajustes SMTP en Comunicación > Configuración
+### Contact Forms
+- Shortcode-based contact forms
+- Server-side and client-side validation
+- Honeypot anti-spam protection
+- Email notifications via PHPMailer
+- Form submission storage in database
 
-## Configuración
+### Chatbot
+- Frontend chat widget
+- Predefined conversation flows
+- Admin configuration interface
+- Conversation logging and analytics
+- Global enable/disable toggle
 
-### SMTP Settings
+### DeepL Translation
+- Automatic content translation (ES ↔ EN)
+- Post editor meta box with translate buttons
+- HTML formatting preservation
+- Custom field translation
+- API rate limit handling with queue
 
-Para enviar emails de forma confiable, configura los ajustes SMTP:
+## Shortcodes
 
-1. Ve a **Comunicación > Configuración**
-2. Ingresa los datos de tu servidor SMTP:
-   - Host SMTP
-   - Puerto (587 para TLS, 465 para SSL)
-   - Usuario SMTP
-   - Contraseña SMTP
-   - Email remitente
-   - Nombre remitente
+### `[newsletter-subscribe]`
 
-### DeepL API
+Subscription form with email validation and double opt-in.
 
-Para habilitar la traducción automática:
-
-1. Obtén una API key de [DeepL](https://www.deepl.com/pro-api)
-2. Ve a **Comunicación > Configuración**
-3. Ingresa tu API key de DeepL
-
-## Uso
-
-### Formulario de Contacto
-
-Usa el shortcode `[contact-form]` para insertar un formulario de contacto:
-
-```
-[contact-form title="Contáctanos" show_phone="yes" show_address="yes"]
-```
-
-**Atributos:**
-- `title`: Título del formulario (default: "Contáctanos")
-- `show_phone`: Mostrar campo de teléfono (yes/no, default: yes)
-- `show_address`: Mostrar información de dirección (yes/no, default: yes)
-
-### Newsletter
-
-Usa el shortcode `[newsletter-subscribe]` para insertar un formulario de suscripción:
-
-```
+```html
 [newsletter-subscribe]
 ```
 
-### ChatBot
+### `[contact-form]`
 
-El chatbot se muestra automáticamente en todas las páginas. Puedes configurar las respuestas en **Comunicación > ChatBot**.
+Contact form with fields: name, email, subject, message.
 
-## Estructura del Plugin
+```html
+[contact-form]
+```
+
+## Configuration
+
+### SMTP Settings
+
+Navigate to **Comunicación → Settings** to configure:
+- SMTP host, port, encryption
+- Authentication credentials
+- From name and email address
+
+### DeepL API
+
+Under **Comunicación → Translation**:
+- Enter your DeepL API key (stored encrypted)
+- Select source/target languages
+- Configure rate limit behavior
+
+### Chatbot
+
+Under **Comunicación → Chatbot**:
+- Enable/disable chatbot globally
+- Configure conversation flows and responses
+- View conversation logs
+
+## Directory Structure
 
 ```
 reforestamos-comunicacion/
-├── includes/              # Clases PHP principales
-│   ├── class-reforestamos-comunicacion.php
-│   ├── class-mailer.php
-│   ├── class-newsletter.php (próximamente)
-│   ├── class-contact-form.php (próximamente)
-│   ├── class-chatbot.php (próximamente)
-│   └── class-deepl-integration.php (próximamente)
-├── admin/                 # Archivos del área de administración
-│   ├── css/
+├── reforestamos-comunicacion.php       # Main plugin file
+├── includes/
+│   ├── class-reforestamos-comunicacion.php  # Main plugin class
+│   ├── class-newsletter.php            # Newsletter management
+│   ├── class-mailer.php                # PHPMailer wrapper
+│   ├── class-contact-form.php          # Contact form handling
+│   ├── class-chatbot.php               # Chatbot engine
+│   ├── class-deepl-integration.php     # DeepL API integration
+│   ├── class-certificate-generator.php # Certificate generation
+│   ├── class-tree-adoption.php         # Tree adoption system
+│   └── class-payment-gateway.php       # Payment processing
+├── admin/
+│   ├── views/
+│   │   ├── campaigns-page.php          # Newsletter campaigns
+│   │   ├── send-logs-page.php          # Email send logs
+│   │   ├── newsletter-settings-page.php # Newsletter settings
+│   │   ├── submissions-list.php        # Contact form submissions
+│   │   ├── chatbot-config.php          # Chatbot configuration
+│   │   ├── chatbot-logs.php            # Chatbot conversation logs
+│   │   └── adoptions-dashboard.php     # Tree adoptions dashboard
+│   ├── css/admin.css                   # Admin styles
+│   └── js/                             # Admin scripts
+├── assets/
 │   ├── js/
-│   └── views/
-├── assets/                # Assets del frontend
-│   ├── css/
-│   └── js/
-├── templates/             # Plantillas de email y formularios
-└── languages/             # Archivos de traducción
+│   │   ├── frontend.js                 # Newsletter/form frontend JS
+│   │   └── chatbot.js                  # Chatbot widget JS
+│   └── css/                            # Frontend styles
+├── templates/
+│   └── forms/
+│       └── contact-form-template.php   # Contact form template
+├── languages/
+│   └── reforestamos-comunicacion.pot   # Translation template
+├── tests/                              # Test files
+├── docs/                               # Feature documentation
+└── uninstall.php                       # Clean uninstall
 ```
 
-## Base de Datos
-
-El plugin crea las siguientes tablas:
-
-- `wp_reforestamos_subscribers`: Suscriptores del newsletter
-- `wp_reforestamos_submissions`: Envíos de formularios de contacto
-- `wp_reforestamos_chatbot_logs`: Logs de conversaciones del chatbot
-
-## Hooks y Filtros
+## API & Hooks
 
 ### Actions
 
-- `reforestamos_comm_before_send_email`: Antes de enviar un email
-- `reforestamos_comm_after_send_email`: Después de enviar un email
-- `reforestamos_comm_form_submitted`: Cuando se envía un formulario
+| Hook | Description |
+|------|-------------|
+| `reforestamos_comunicacion_init` | Fires after plugin initialization |
+| `reforestamos_newsletter_sent` | Fires after a newsletter is sent. Args: `$campaign_id`, `$recipient_count` |
+| `reforestamos_contact_form_submitted` | Fires after form submission. Args: `$form_data` |
+| `reforestamos_chatbot_message` | Fires on chatbot message. Args: `$message`, `$response` |
+| `reforestamos_translation_complete` | Fires after translation. Args: `$post_id`, `$target_lang` |
+| `reforestamos_subscriber_added` | Fires when a subscriber is added. Args: `$email` |
+| `reforestamos_subscriber_removed` | Fires when a subscriber unsubscribes. Args: `$email` |
 
 ### Filters
 
-- `reforestamos_comm_email_content`: Filtrar contenido del email
-- `reforestamos_comm_form_fields`: Filtrar campos del formulario
-- `reforestamos_comm_chatbot_response`: Filtrar respuesta del chatbot
+| Filter | Description |
+|--------|-------------|
+| `reforestamos_contact_form_fields` | Filter contact form fields array |
+| `reforestamos_contact_form_validation` | Filter form validation rules |
+| `reforestamos_newsletter_template` | Filter newsletter email template |
+| `reforestamos_chatbot_response` | Filter chatbot response before sending |
+| `reforestamos_deepl_content` | Filter content before sending to DeepL |
+| `reforestamos_deepl_translated` | Filter translated content before saving |
+| `reforestamos_mailer_headers` | Filter email headers |
+| `reforestamos_spam_check` | Filter spam detection result |
 
-## Desarrollo
+### REST API Endpoints
 
-### Requisitos de Desarrollo
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/reforestamos-comm/v1/subscribe` | POST | Newsletter subscription |
+| `/reforestamos-comm/v1/unsubscribe` | POST | Newsletter unsubscription |
+| `/reforestamos-comm/v1/contact` | POST | Contact form submission |
+| `/reforestamos-comm/v1/chatbot` | POST | Chatbot message |
+| `/reforestamos-comm/v1/translate` | POST | Trigger translation (auth required) |
 
-- Node.js y npm (para compilar assets si es necesario)
-- Composer (para dependencias PHP)
+## Database Tables
 
-### Testing
+The plugin creates custom tables on activation:
 
-```bash
-# Ejecutar tests PHP
-composer test
+| Table | Purpose |
+|-------|---------|
+| `{prefix}reforestamos_subscribers` | Newsletter subscribers |
+| `{prefix}reforestamos_send_logs` | Email delivery logs |
+| `{prefix}reforestamos_submissions` | Contact form submissions |
+| `{prefix}reforestamos_chatbot_logs` | Chatbot conversation logs |
 
-# Ejecutar tests JavaScript
-npm test
-```
+## Security
 
-## Seguridad
+- All form inputs sanitized and validated
+- Honeypot fields for spam protection
+- Rate limiting on contact forms
+- API credentials stored encrypted
+- Nonce verification on all AJAX requests
+- Prepared statements for all database queries
 
-- Todos los inputs son sanitizados usando funciones de WordPress
-- Protección anti-spam con honeypot en formularios
-- Verificación de nonce en todas las peticiones AJAX
-- Contraseñas SMTP almacenadas de forma segura
+## Uninstall
 
-## Soporte
+Deleting the plugin via `uninstall.php` removes:
+- All custom database tables
+- Plugin options from `wp_options`
+- Scheduled cron events
 
-Para soporte y reportar bugs, contacta a [soporte@reforestamos.org](mailto:soporte@reforestamos.org)
-
-## Changelog
-
-### 1.0.0
-- Versión inicial
-- Estructura base del plugin
-- Configuración de PHPMailer/SMTP
-- Sistema de base de datos
-
-## Licencia
+## License
 
 GPL v2 or later
-
-## Créditos
-
-Desarrollado por Reforestamos México

@@ -3,67 +3,78 @@
  *
  * Handles filtering and interactions for the companies grid
  *
+ * @param   $
  * @package Reforestamos_Empresas
  */
 
-(function($) {
+(function ($) {
 	'use strict';
 
 	/**
 	 * Companies Grid Handler
 	 */
-	var CompaniesGrid = {
-		
+	const CompaniesGrid = {
 		/**
 		 * Initialize
 		 */
-		init: function() {
+		init() {
 			this.bindEvents();
 		},
 
 		/**
 		 * Bind events
 		 */
-		bindEvents: function() {
+		bindEvents() {
 			// Filter change events
-			$('.companies-filter').on('change', '.filter-select', this.handleFilter.bind(this));
-			
+			$('.companies-filter').on(
+				'change',
+				'.filter-select',
+				this.handleFilter.bind(this)
+			);
+
 			// Track company clicks
-			$('.companies-grid').on('click', '.company-link', this.trackClick.bind(this));
+			$('.companies-grid').on(
+				'click',
+				'.company-link',
+				this.trackClick.bind(this)
+			);
 		},
 
 		/**
 		 * Handle filter changes
+		 * @param e
 		 */
-		handleFilter: function(e) {
-			var $wrapper = $(e.target).closest('.companies-grid-wrapper');
-			var $grid = $wrapper.find('.companies-grid');
-			var $items = $grid.find('.company-item');
-			
+		handleFilter(e) {
+			const $wrapper = $(e.target).closest('.companies-grid-wrapper');
+			const $grid = $wrapper.find('.companies-grid');
+			const $items = $grid.find('.company-item');
+
 			// Get filter values
-			var industryFilter = $wrapper.find('#filter-industry').val();
-			var partnershipFilter = $wrapper.find('#filter-partnership').val();
-			
-			var visibleCount = 0;
-			
+			const industryFilter = $wrapper.find('#filter-industry').val();
+			const partnershipFilter = $wrapper
+				.find('#filter-partnership')
+				.val();
+
+			let visibleCount = 0;
+
 			// Filter items
-			$items.each(function() {
-				var $item = $(this);
-				var industry = $item.data('industry');
-				var partnership = $item.data('partnership');
-				
-				var showItem = true;
-				
+			$items.each(function () {
+				const $item = $(this);
+				const industry = $item.data('industry');
+				const partnership = $item.data('partnership');
+
+				let showItem = true;
+
 				// Check industry filter
 				if (industryFilter && industry !== industryFilter) {
 					showItem = false;
 				}
-				
+
 				// Check partnership filter
 				if (partnershipFilter && partnership !== partnershipFilter) {
 					showItem = false;
 				}
-				
+
 				// Show/hide item
 				if (showItem) {
 					$item.removeClass('hidden').fadeIn(300);
@@ -72,40 +83,47 @@
 					$item.addClass('hidden').fadeOut(300);
 				}
 			});
-			
+
 			// Update count
 			this.updateCount($wrapper, visibleCount);
-			
+
 			// Show no results message if needed
 			this.toggleNoResults($wrapper, visibleCount);
 		},
 
 		/**
 		 * Update companies count
+		 * @param $wrapper
+		 * @param count
 		 */
-		updateCount: function($wrapper, count) {
-			var $countEl = $wrapper.find('.companies-count');
-			
+		updateCount($wrapper, count) {
+			const $countEl = $wrapper.find('.companies-count');
+
 			if ($countEl.length) {
-				var text = count === 1 
-					? 'Mostrando 1 empresa' 
-					: 'Mostrando ' + count + ' empresas';
-				
+				const text =
+					count === 1
+						? 'Mostrando 1 empresa'
+						: 'Mostrando ' + count + ' empresas';
+
 				$countEl.text(text);
 			}
 		},
 
 		/**
 		 * Toggle no results message
+		 * @param $wrapper
+		 * @param count
 		 */
-		toggleNoResults: function($wrapper, count) {
-			var $noResults = $wrapper.find('.no-companies-found');
-			var $grid = $wrapper.find('.companies-grid');
-			var $countEl = $wrapper.find('.companies-count');
-			
+		toggleNoResults($wrapper, count) {
+			let $noResults = $wrapper.find('.no-companies-found');
+			const $grid = $wrapper.find('.companies-grid');
+			const $countEl = $wrapper.find('.companies-count');
+
 			if (count === 0) {
 				if ($noResults.length === 0) {
-					$noResults = $('<div class="no-companies-found"><p>No se encontraron empresas con los filtros seleccionados.</p></div>');
+					$noResults = $(
+						'<div class="no-companies-found"><p>No se encontraron empresas con los filtros seleccionados.</p></div>'
+					);
 					$grid.after($noResults);
 				}
 				$noResults.show();
@@ -120,15 +138,16 @@
 
 		/**
 		 * Track company click
+		 * @param e
 		 */
-		trackClick: function(e) {
-			var $link = $(e.currentTarget);
-			var companyId = $link.data('company-id');
-			
+		trackClick(e) {
+			const $link = $(e.currentTarget);
+			const companyId = $link.data('company-id');
+
 			if (!companyId || !reforestamosEmpresas) {
 				return;
 			}
-			
+
 			// Send AJAX request to track click
 			$.ajax({
 				url: reforestamosEmpresas.ajaxUrl,
@@ -137,21 +156,20 @@
 					action: 'track_company_click',
 					nonce: reforestamosEmpresas.nonce,
 					company_id: companyId,
-					click_type: 'logo'
+					click_type: 'logo',
 				},
 				// Don't wait for response, let navigation continue
-				async: true
+				async: true,
 			});
-		}
+		},
 	};
 
 	/**
 	 * Initialize on document ready
 	 */
-	$(document).ready(function() {
+	$(document).ready(function () {
 		if ($('.companies-grid-wrapper').length) {
 			CompaniesGrid.init();
 		}
 	});
-
 })(jQuery);

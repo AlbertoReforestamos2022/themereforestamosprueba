@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test --prefix reforestamos-block-theme",
+    "test:watch": "npm run test:watch --prefix reforestamos-block-theme",
+    "test:coverage": "npm run test:coverage --prefix reforestamos-block-theme",
+    "lint:js": "eslint \"reforestamos-block-theme/**/*.js\" \"reforestamos-core/**/*.js\" \"reforestamos-micrositios/**/*.js\" \"reforestamos-comunicacion/**/*.js\" \"reforestamos-empresas/**/*.js\"",
+    "lint:js:fix": "eslint --fix \"reforestamos-block-theme/**/*.js\" \"reforestamos-core/**/*.js\" \"reforestamos-micrositios/**/*.js\" \"reforestamos-comunicacion/**/*.js\" \"reforestamos-empresas/**/*.js\"",
+    "format": "prettier --write \"reforestamos-block-theme/src/**/*.{js,scss}\" \"reforestamos-block-theme/blocks/**/*.{js,scss}\" \"reforestamos-core/**/*.js\" \"reforestamos-micrositios/**/*.js\" \"reforestamos-comunicacion/**/*.js\" \"reforestamos-empresas/**/*.js\"",
+    "format:check": "prettier --check \"reforestamos-block-theme/src/**/*.{js,scss}\" \"reforestamos-block-theme/blocks/**/*.{js,scss}\"",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +19,26 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.11.3"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^24.3.0",
+    "@wordpress/prettier-config": "^4.41.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,css}": [
+      "prettier --write"
+    ],
+    "*.php": [
+      "vendor/bin/phpcs --report=summary"
+    ]
+  }
 }

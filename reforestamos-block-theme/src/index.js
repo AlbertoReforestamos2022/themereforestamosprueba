@@ -1,6 +1,6 @@
 /**
  * Main entry point for block editor scripts
- * 
+ *
  * @package Reforestamos
  */
 

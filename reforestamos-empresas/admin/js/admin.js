@@ -1,35 +1,47 @@
 /**
  * Admin JavaScript for Reforestamos Empresas
  *
+ * @param   $
  * @package Reforestamos_Empresas
  */
 
-(function($) {
+(function ($) {
 	'use strict';
 
 	/**
 	 * Gallery Management
 	 */
-	var CompanyGallery = {
+	const CompanyGallery = {
 		frame: null,
 
-		init: function() {
+		init() {
 			this.bindEvents();
 			this.initSortable();
 		},
 
-		bindEvents: function() {
+		bindEvents() {
 			// Add gallery images button
-			$('#add_gallery_images').on('click', this.openMediaFrame.bind(this));
-			
+			$('#add_gallery_images').on(
+				'click',
+				this.openMediaFrame.bind(this)
+			);
+
 			// Remove gallery image
-			$(document).on('click', '.gallery-image .remove-image', this.removeImage.bind(this));
-			
+			$(document).on(
+				'click',
+				'.gallery-image .remove-image',
+				this.removeImage.bind(this)
+			);
+
 			// Edit caption on double-click
-			$(document).on('dblclick', '.gallery-image img', this.editCaption.bind(this));
+			$(document).on(
+				'dblclick',
+				'.gallery-image img',
+				this.editCaption.bind(this)
+			);
 		},
 
-		initSortable: function() {
+		initSortable() {
 			// Make gallery sortable for reordering
 			if ($.fn.sortable) {
 				$('#company_gallery_preview').sortable({
@@ -37,12 +49,12 @@
 					cursor: 'move',
 					opacity: 0.7,
 					placeholder: 'gallery-image-placeholder',
-					update: this.updateOrder.bind(this)
+					update: this.updateOrder.bind(this),
 				});
 			}
 		},
 
-		openMediaFrame: function(e) {
+		openMediaFrame(e) {
 			e.preventDefault();
 
 			// If the media frame already exists, reopen it
@@ -55,9 +67,9 @@
 			this.frame = wp.media({
 				title: 'Seleccionar Imágenes de Galería',
 				button: {
-					text: 'Agregar a Galería'
+					text: 'Agregar a Galería',
 				},
-				multiple: true
+				multiple: true,
 			});
 
 			// When images are selected
@@ -67,29 +79,36 @@
 			this.frame.open();
 		},
 
-		selectImages: function() {
-			var selection = this.frame.state().get('selection');
-			var ids = $('#company_gallery_ids').val();
-			var idsArray = ids ? ids.split(',') : [];
+		selectImages() {
+			const selection = this.frame.state().get('selection');
+			const ids = $('#company_gallery_ids').val();
+			const idsArray = ids ? ids.split(',') : [];
 
-			selection.map(function(attachment) {
+			selection.map(function (attachment) {
 				attachment = attachment.toJSON();
-				
+
 				// Add to IDs array if not already present
 				if (idsArray.indexOf(attachment.id.toString()) === -1) {
 					idsArray.push(attachment.id);
-					
+
 					// Get caption if exists
-					var caption = attachment.caption || '';
-					var captionHtml = caption ? '<div class="gallery-caption">' + caption + '</div>' : '';
-					
+					const caption = attachment.caption || '';
+					const captionHtml = caption
+						? '<div class="gallery-caption">' + caption + '</div>'
+						: '';
+
 					// Add preview
-					var imageHtml = '<div class="gallery-image" data-id="' + attachment.id + '">' +
-						'<img src="' + attachment.sizes.thumbnail.url + '" alt="" title="Doble clic para editar caption">' +
+					const imageHtml =
+						'<div class="gallery-image" data-id="' +
+						attachment.id +
+						'">' +
+						'<img src="' +
+						attachment.sizes.thumbnail.url +
+						'" alt="" title="Doble clic para editar caption">' +
 						'<span class="remove-image">&times;</span>' +
 						captionHtml +
 						'</div>';
-					
+
 					$('#company_gallery_preview').append(imageHtml);
 				}
 			});
@@ -98,16 +117,16 @@
 			$('#company_gallery_ids').val(idsArray.join(','));
 		},
 
-		removeImage: function(e) {
+		removeImage(e) {
 			e.preventDefault();
-			
-			var $image = $(e.currentTarget).closest('.gallery-image');
-			var imageId = $image.data('id').toString();
-			var ids = $('#company_gallery_ids').val();
-			var idsArray = ids ? ids.split(',') : [];
+
+			const $image = $(e.currentTarget).closest('.gallery-image');
+			const imageId = $image.data('id').toString();
+			const ids = $('#company_gallery_ids').val();
+			const idsArray = ids ? ids.split(',') : [];
 
 			// Remove from array
-			var index = idsArray.indexOf(imageId);
+			const index = idsArray.indexOf(imageId);
 			if (index > -1) {
 				idsArray.splice(index, 1);
 			}
@@ -116,29 +135,32 @@
 			$('#company_gallery_ids').val(idsArray.join(','));
 
 			// Remove preview
-			$image.fadeOut(300, function() {
+			$image.fadeOut(300, function () {
 				$(this).remove();
 			});
 		},
 
-		updateOrder: function() {
-			var idsArray = [];
-			$('#company_gallery_preview .gallery-image').each(function() {
+		updateOrder() {
+			const idsArray = [];
+			$('#company_gallery_preview .gallery-image').each(function () {
 				idsArray.push($(this).data('id'));
 			});
 			$('#company_gallery_ids').val(idsArray.join(','));
 		},
 
-		editCaption: function(e) {
+		editCaption(e) {
 			e.preventDefault();
-			
-			var $image = $(e.currentTarget).closest('.gallery-image');
-			var imageId = $image.data('id');
-			var $caption = $image.find('.gallery-caption');
-			var currentCaption = $caption.length ? $caption.text() : '';
-			
-			var newCaption = prompt('Ingrese el caption para esta imagen:', currentCaption);
-			
+
+			const $image = $(e.currentTarget).closest('.gallery-image');
+			const imageId = $image.data('id');
+			const $caption = $image.find('.gallery-caption');
+			const currentCaption = $caption.length ? $caption.text() : '';
+
+			const newCaption = prompt(
+				'Ingrese el caption para esta imagen:',
+				currentCaption
+			);
+
 			if (newCaption !== null) {
 				// Save caption via AJAX
 				$.ajax({
@@ -148,9 +170,9 @@
 						action: 'save_gallery_caption',
 						nonce: $('#gallery_nonce').val() || '',
 						image_id: imageId,
-						caption: newCaption
+						caption: newCaption,
 					},
-					success: function(response) {
+					success(response) {
 						if (response.success) {
 							// Update caption display
 							if ($caption.length) {
@@ -160,28 +182,31 @@
 									$caption.remove();
 								}
 							} else if (newCaption) {
-								$image.append('<div class="gallery-caption">' + newCaption + '</div>');
+								$image.append(
+									'<div class="gallery-caption">' +
+										newCaption +
+										'</div>'
+								);
 							}
 						} else {
 							alert('Error al guardar el caption');
 						}
 					},
-					error: function() {
+					error() {
 						alert('Error de conexión al guardar el caption');
-					}
+					},
 				});
 			}
-		}
+		},
 	};
 
 	/**
 	 * Initialize on document ready
 	 */
-	$(document).ready(function() {
+	$(document).ready(function () {
 		// Only initialize on empresas post type
 		if ($('body').hasClass('post-type-empresas')) {
 			CompanyGallery.init();
 		}
 	});
-
 })(jQuery);

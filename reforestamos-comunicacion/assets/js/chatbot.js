@@ -1,11 +1,12 @@
 /**
  * Chatbot Frontend JavaScript
  *
+ * @param   $
  * @package Reforestamos_Comunicacion
  * @since 1.0.0
  */
 
-(function($) {
+(function ($) {
 	'use strict';
 
 	/**
@@ -15,7 +16,7 @@
 		/**
 		 * Initialize chatbot
 		 */
-		init: function() {
+		init() {
 			this.cacheDom();
 			this.bindEvents();
 		},
@@ -23,7 +24,7 @@
 		/**
 		 * Cache DOM elements
 		 */
-		cacheDom: function() {
+		cacheDom() {
 			this.$container = $('#reforestamos-chatbot');
 			this.$toggle = $('#chatbot-toggle');
 			this.$window = $('#chatbot-window');
@@ -37,7 +38,7 @@
 		/**
 		 * Bind events
 		 */
-		bindEvents: function() {
+		bindEvents() {
 			this.$toggle.on('click', this.toggleWindow.bind(this));
 			this.$close.on('click', this.closeWindow.bind(this));
 			this.$send.on('click', this.sendMessage.bind(this));
@@ -46,10 +47,11 @@
 
 		/**
 		 * Toggle chatbot window
+		 * @param e
 		 */
-		toggleWindow: function(e) {
+		toggleWindow(e) {
 			e.preventDefault();
-			
+
 			if (this.$window.is(':visible')) {
 				this.closeWindow();
 			} else {
@@ -60,11 +62,11 @@
 		/**
 		 * Open chatbot window
 		 */
-		openWindow: function() {
+		openWindow() {
 			this.$window.fadeIn(300);
 			this.$toggle.addClass('active');
 			this.$input.focus();
-			
+
 			// Scroll to bottom
 			this.scrollToBottom();
 		},
@@ -72,16 +74,18 @@
 		/**
 		 * Close chatbot window
 		 */
-		closeWindow: function() {
+		closeWindow() {
 			this.$window.fadeOut(300);
 			this.$toggle.removeClass('active');
 		},
 
 		/**
 		 * Handle key press in input
+		 * @param e
 		 */
-		handleKeyPress: function(e) {
-			if (e.which === 13) { // Enter key
+		handleKeyPress(e) {
+			if (e.which === 13) {
+				// Enter key
 				e.preventDefault();
 				this.sendMessage();
 			}
@@ -90,7 +94,7 @@
 		/**
 		 * Send message to chatbot
 		 */
-		sendMessage: function() {
+		sendMessage() {
 			const message = this.$input.val().trim();
 
 			if (message === '') {
@@ -117,24 +121,25 @@
 				data: {
 					action: 'chatbot_message',
 					nonce: reforestamosChatbot.nonce,
-					message: message,
-					session_id: this.sessionId
+					message,
+					session_id: this.sessionId,
 				},
 				success: this.handleResponse.bind(this),
 				error: this.handleError.bind(this),
-				complete: function() {
+				complete: function () {
 					// Re-enable input
 					this.$input.prop('disabled', false);
 					this.$send.prop('disabled', false);
 					this.$input.focus();
-				}.bind(this)
+				}.bind(this),
 			});
 		},
 
 		/**
 		 * Handle successful response
+		 * @param response
 		 */
-		handleResponse: function(response) {
+		handleResponse(response) {
 			// Remove typing indicator
 			this.removeTypingIndicator();
 
@@ -143,9 +148,10 @@
 				this.addMessage(response.data.response, 'bot');
 			} else {
 				// Show error message
-				const errorMsg = response.data && response.data.message 
-					? response.data.message 
-					: 'Lo sentimos, hubo un error. Por favor intenta de nuevo.';
+				const errorMsg =
+					response.data && response.data.message
+						? response.data.message
+						: 'Lo sentimos, hubo un error. Por favor intenta de nuevo.';
 				this.addMessage(errorMsg, 'bot');
 			}
 		},
@@ -153,19 +159,25 @@
 		/**
 		 * Handle error response
 		 */
-		handleError: function() {
+		handleError() {
 			// Remove typing indicator
 			this.removeTypingIndicator();
 
 			// Show error message
-			this.addMessage('Lo sentimos, hubo un error de conexión. Por favor intenta de nuevo.', 'bot');
+			this.addMessage(
+				'Lo sentimos, hubo un error de conexión. Por favor intenta de nuevo.',
+				'bot'
+			);
 		},
 
 		/**
 		 * Add message to chat
+		 * @param text
+		 * @param type
 		 */
-		addMessage: function(text, type) {
-			const messageClass = type === 'user' ? 'user-message' : 'bot-message';
+		addMessage(text, type) {
+			const messageClass =
+				type === 'user' ? 'user-message' : 'bot-message';
 			const messageHtml = `
 				<div class="chatbot-message ${messageClass}">
 					<div class="message-content">${this.escapeHtml(text)}</div>
@@ -179,7 +191,7 @@
 		/**
 		 * Show typing indicator
 		 */
-		showTypingIndicator: function() {
+		showTypingIndicator() {
 			const typingHtml = `
 				<div class="chatbot-message bot-message typing-indicator" id="typing-indicator">
 					<div class="message-content">
@@ -197,41 +209,46 @@
 		/**
 		 * Remove typing indicator
 		 */
-		removeTypingIndicator: function() {
+		removeTypingIndicator() {
 			$('#typing-indicator').remove();
 		},
 
 		/**
 		 * Scroll messages to bottom
 		 */
-		scrollToBottom: function() {
-			this.$messages.animate({
-				scrollTop: this.$messages[0].scrollHeight
-			}, 300);
+		scrollToBottom() {
+			this.$messages.animate(
+				{
+					scrollTop: this.$messages[0].scrollHeight,
+				},
+				300
+			);
 		},
 
 		/**
 		 * Escape HTML to prevent XSS
+		 * @param text
 		 */
-		escapeHtml: function(text) {
+		escapeHtml(text) {
 			const map = {
 				'&': '&amp;',
 				'<': '&lt;',
 				'>': '&gt;',
 				'"': '&quot;',
-				"'": '&#039;'
+				"'": '&#039;',
 			};
-			return text.replace(/[&<>"']/g, function(m) { return map[m]; });
-		}
+			return text.replace(/[&<>"']/g, function (m) {
+				return map[m];
+			});
+		},
 	};
 
 	/**
 	 * Initialize on document ready
 	 */
-	$(document).ready(function() {
+	$(document).ready(function () {
 		if ($('#reforestamos-chatbot').length) {
 			ReforestamosChatBot.init();
 		}
 	});
-
 })(jQuery);
