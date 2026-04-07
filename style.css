@@ -1,5 +1,5 @@
 /*
-    Theme Name:   Reforestamos Mexico
+    Theme Name:   Reforestamos Mexico GitHub
     Theme URI:    
     Description:  Theme Diseñado para Reforestamos Mexico
     Author:       Reforestamos México
@@ -11287,8 +11287,7 @@ textarea.form-control-lg {
 }
 .title-background {
   width: 100%;
-  -webkit-animation: fondo-anim 30s infinite alternate;
-  animation: fondo-anim 30s infinite alternate;
+
 }
 @media screen and (max-width: 500px) {
   .title-background {
